@@ -165,12 +165,12 @@ a,
 
 .logoAnimationSeven {
   animation-direction: top;
-  animation: opacityAnimation 6s;
+  animation: opacityAnimation 1.5s;
 }
 
 .logoAnimationSevenTwo {
   animation-direction: top;
-  animation: opacityAnimation 7s;
+  animation: opacityAnimation 3s;
 }
 
 .lightOnAnimationSeven {
@@ -181,5 +181,5 @@ a,
 
 .homeAnimation {
   animation-direction: top;
-  animation: opacityAnimation 5s;
+  animation: opacityAnimation 4s;
 }
