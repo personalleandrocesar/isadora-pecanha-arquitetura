@@ -220,9 +220,28 @@ code {
 }
 
 
-@media only screen and (min-width: 700px) {
-.main-four-card {
-  margin: 0 150px;
+
+@media only screen and (min-width: 620px) {
+  .main-four {
+    padding: 0 150px;
+  }
 }
+@media only screen and (min-width: 800px) {
+
+  .main-four {
+    padding: 0 200px;
+  }
+}
+@media only screen and (min-width: 950px) {
+
+  .main-four {
+    padding: 0 300px;
+  }
+}
+@media only screen and (min-width: 1150px) {
+
+  .main-four {
+    padding: 0 400px;
+  }
 }
 </style>
