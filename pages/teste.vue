@@ -7,6 +7,6 @@ useHead({
 <template>
     <main>
         <LogoHome />
-        <TheWelcome />
+        <Teste />
     </main>
 </template>

@@ -1,0 +1,270 @@
+<script>
+export default {
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    }
+  }
+}
+</script>
+
+<template>
+  <div class="homeAnimation">
+
+      <div class='main-one'>
+
+        <div class='main-one-card'>
+          <a href="https://docs.google.com/forms/d/1xn0DHP1O2N1hCFyClRgCGdcRpA7UGcmAZoYaXSkA4Es/viewform?edit_requested=true" target="_blank" @click.native="scrollToTop()" >
+            <h4>
+              <Icon name="fluent:clipboard-checkmark-24-filled" />
+
+            Solicite seu Orçamento </h4>
+          </a>
+        </div>
+
+        <div class='main-one-card'>
+          <a href="https://api.whatsapp.com/send?phone=5521966579611%20&text=Ol%C3%A1%20Isadora,%20me%20chamo%20" target="_blank" @click.native="scrollToTop()">
+            <h4>
+              <Icon name="ri:whatsapp-fill" />
+
+            Nosso Contato pelo Whatsapp </h4>
+          </a>
+        </div>
+
+      </div>
+      <br>
+
+
+      <div class="main-two">
+      <div>
+
+      <a href="mailto:contato@isadoraarq.com">
+        <Icon name="ic:outline-alternate-email" /> E-mail
+      </a>
+      <a href="https://br.pinterest.com/ipeanha1007/">
+        <Icon name="mdi:pinterest" /> Pinterest
+      </a>
+
+      <a href="https://www.instagram.com/isadorapecanha_arquitetura/">
+        <Icon name="uil:instagram-alt" /> Instagram
+      </a>
+      </div>
+      </div>
+
+    </div>
+    <div class='main-tree'>
+
+        <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/logo.png" width="100" height="100" />
+        <span class='logoAnimationSevenTwo'>
+            <h3>CASA 17</h3>
+        </span>
+    </div>
+    <div class='main-four'>
+      
+    </div>
+</template>
+<style scoped>
+
+i {
+  color: var(--color-text);
+  margin: auto;
+}
+
+h4 .icon {
+  margin: -4px 0 0 0  ;
+}
+
+
+iframe {
+  margin-left: 10px;
+}
+
+code {
+  font-size: 0.5em;
+  margin-left: 15px;
+  padding-left: 10px;
+  border-left: solid 5px var(--color-text);
+}
+
+.main-one {
+  padding: 0 40px;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  overflow-x:auto;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.main-one i {
+  font-size: 1.2em;
+  color: var(--color-text);
+}
+
+.main-one h5{
+  margin-left: 10px;
+}
+
+.main-one-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.main-one-card a {
+  width: 100%;
+  border-radius: 30px;
+  flex-direction: row;
+  border: solid .1px var(--color-border);
+  box-shadow: 0 0px 5px var(--color-border);
+  margin: 0px 5px 20px 0px;
+  transform: translateY(1em);
+  transition: all .4s linear;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-one-card a h4 {
+  transition: all .4s linear;
+}
+
+.main-one-card a:hover {
+  transform: translateY(0.8em) ;
+  box-shadow: 0 5px 5px #9eb8a7;
+  background-color: #eee;
+  color: #9eb8a7;
+}
+
+.main-one-card a:hover h4{
+  color: #9eb8a7;
+}
+
+.main-one-card span {
+  position: relative;
+  top: -6px;
+  left: -14px;
+}
+
+.main-one-card h4 {
+  padding: 10px;
+  color: var(--color-text);
+}
+
+.main-one-card p {
+  font-size: .8em;
+}
+
+
+
+@media only screen and (min-width: 620px) {
+  .main-one {
+    padding: 0 150px;
+  }
+}
+@media only screen and (min-width: 800px) {
+
+  .main-one {
+    padding: 0 200px;
+  }
+}
+@media only screen and (min-width: 950px) {
+
+  .main-one {
+    padding: 0 300px;
+  }
+}
+@media only screen and (min-width: 1150px) {
+
+  .main-one {
+    padding: 0 400px;
+  }
+}
+
+.main-two {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px 0 45px 0px;
+  color: var(--color-text);
+  transition: all .4s linear;
+}
+
+.main-two div {
+  display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+.main-two a .icon {
+  font-size: 20px;
+  margin: 2px 0;
+}
+
+.main-two a .icon:hover {
+  margin: 2px 0;
+}
+
+
+.main-two a {
+  border: solid .1px var(--color-border);
+  height: 60px;
+  width: 60px;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size:.7em;
+  transition: all .4s linear;
+  margin: 0px 4px 20px 4px;
+  border-radius: 15px;
+  transform: translateY(1em);
+  font-weight: bold ;
+
+}
+.main-two a:hover {
+  transform: translateY(0.8em) ;
+  box-shadow: 0 5px 5px #9eb8a7;
+  background-color: #eee;
+  color: #9eb8a7;
+}
+
+
+.main-tree {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin:-7px 0 0px 20px;
+}
+
+h3 {
+    color: var(--color-text);
+  transition: all .3s linear;
+  margin:-15px 0 50px 30px;
+  text-align: center;
+    font-size: .7rem;
+}
+
+h3:nth-child(2) {
+  margin-top: -60px;
+}
+
+.main-four {
+  padding: 0 40px;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  overflow-x:auto;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  border: solid .1px var(--color-border);
+}
+</style>

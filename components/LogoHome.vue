@@ -5,7 +5,7 @@ import LCLogo from '@/components/LCLogo.vue'
     <header>
         <div class='logo'>
 
-            <img alt="leandrocesar.com logo" class="logo" src="@/assets/logo.png" width="200" height="200" />
+            <img alt="Isadora Peçanha Arquitetura Logo" class="logo" src="@/assets/logo.png" width="200" height="200" />
             <span class='logoAnimationSeven'>
                 <h1>ISADORA PEÇANHA</h1>
             </span>
