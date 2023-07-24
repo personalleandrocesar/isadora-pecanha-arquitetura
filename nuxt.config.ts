@@ -10,8 +10,8 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://kit.fontawesome.com/da2962ce7f.js' }
      ],
       meta: [
-        { name: 'theme-color', content: '#095D62' },
-        { name: 'theme-color', content: '#095D62' },
+        { name: 'theme-color', content: '#d1dad5' },
+        { name: 'theme-color', content: '#d1dad5' },
       ],
       noscript: [
         // <noscript>JavaScript is required</noscript>
