@@ -18,7 +18,7 @@ export default {
             <h4>
               <Icon name="fluent:clipboard-checkmark-24-filled" />
 
-            Solicite seu orçamento </h4>
+            Solicite seu Orçamento </h4>
           </a>
         </div>
 
@@ -83,6 +83,7 @@ code {
   flex-wrap: wrap;
   padding: 0px 0 45px 0px;
   color: var(--color-text);
+  transition: all .4s linear;
 }
 
 .main-two div {
@@ -93,10 +94,13 @@ code {
     margin-bottom: 20px;
   }
 
-.main-two .icon {
+.main-two a .icon {
   font-size: 20px;
   margin: 2px 0;
-  transition: all .4s linear;
+}
+
+.main-two a .icon:hover {
+  margin: 2px 0;
 }
 
 
@@ -115,6 +119,8 @@ code {
   margin: 0px 4px 20px 4px;
   border-radius: 15px;
   transform: translateY(1em);
+  font-weight: bold ;
+
 }
 .main-two a:hover {
   transform: translateY(0.8em) ;
@@ -214,9 +220,9 @@ code {
 }
 
 
-@media only screen and (max-width: 382px) {
-  .main-tree-card {
-    width: 90%;
-  }
+@media only screen and (min-width: 700px) {
+.main-four-card {
+  margin: 0 150px;
+}
 }
 </style>
