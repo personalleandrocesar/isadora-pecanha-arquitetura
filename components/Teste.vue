@@ -57,16 +57,14 @@ export default {
           <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
         </NuxtLink>
         <NuxtLink>
-          <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projeto.png" width="70" height="70" />
+          <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/clientes.png" width="70" height="70" />
         </NuxtLink>
-        <NuxtLink>
-          <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projeto.png" width="70" height="70" />
+        <NuxtLink to="/sobre">
+          <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/sobre.png" width="70" height="70" />
         </NuxtLink>
 
     </div>
-    <div class='main-four'>
-
-    </div>
+  <NuxtPage />
 </template>
 <style scoped>
 
@@ -122,7 +120,7 @@ code {
   border-radius: 30px;
   flex-direction: row;
   border: solid .1px var(--color-border);
-  box-shadow: 0 0px 5px var(--color-border);
+  box-shadow: 0 2px 2px var(--color-border);
   margin: 0px 5px 20px 0px;
   transform: translateY(1em);
   transition: all .4s linear;
@@ -136,8 +134,8 @@ code {
 }
 
 .main-one-card a:hover {
-  transform: translateY(0.8em) ;
-  box-shadow: 0 5px 5px #9eb8a7;
+  transform: translateY(0.9em) ;
+  box-shadow: 0 4px 4px #9eb8a7;
   background-color: #eee;
   color: #9eb8a7;
 }
@@ -234,8 +232,8 @@ code {
 
 }
 .main-two a:hover {
-  transform: translateY(0.8em) ;
-  box-shadow: 0 5px 5px #9eb8a7;
+  transform: translateY(0.9em) ;
+  box-shadow: 0 4px 4px #9eb8a7;
   background-color: #eee;
   color: #9eb8a7;
 }
@@ -262,13 +260,14 @@ code {
   align-items:center;
   flex-wrap: wrap;
   transform: translateY(1em);
+  box-shadow: 0 .5px .5px #9eb8a7;
 }
 
 .main-tree a:hover {
-  transform: translateY(0.8em) ;
-  box-shadow: 0 5px 5px #9eb8a7;
-  background-color: #eee;
+  transform: translateY(0.9em) ;
+  box-shadow: 0 4px 4px #9eb8a7;
   color: #9eb8a7;
+  background-color: #eee;
 }
 
 h3 {
