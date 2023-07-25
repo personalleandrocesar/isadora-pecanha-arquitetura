@@ -53,14 +53,19 @@ export default {
 
     </div>
     <div class='main-tree'>
+        <NuxtLink to="/projetos">
+          <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
+        </NuxtLink>
+        <NuxtLink>
+          <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projeto.png" width="70" height="70" />
+        </NuxtLink>
+        <NuxtLink>
+          <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projeto.png" width="70" height="70" />
+        </NuxtLink>
 
-        <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/logo.png" width="100" height="100" />
-        <span class='logoAnimationSevenTwo'>
-            <h3>CASA 17</h3>
-        </span>
     </div>
     <div class='main-four'>
-      
+
     </div>
 </template>
 <style scoped>
@@ -187,7 +192,7 @@ code {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0px 0 45px 0px;
+  padding: 0px 0 35px 0px;
   color: var(--color-text);
   transition: all .4s linear;
 }
@@ -222,7 +227,7 @@ code {
   flex-wrap: wrap;
   font-size:.7em;
   transition: all .4s linear;
-  margin: 0px 4px 20px 4px;
+  margin: 0px 4px 0px 4px;
   border-radius: 15px;
   transform: translateY(1em);
   font-weight: bold ;
@@ -238,11 +243,32 @@ code {
 
 .main-tree {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content:space-around;
+    flex-direction: row;
+    align-items:center;
     flex-wrap: wrap;
-    margin:-7px 0 0px 20px;
+    margin:-7px 20px 30px 20px;
+}
+
+.main-tree a {
+  transition: all .4s linear;
+  border: solid .1px var(--color-border);
+  border-radius: 15px;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  align-items:center;
+  flex-wrap: wrap;
+  transform: translateY(1em);
+}
+
+.main-tree a:hover {
+  transform: translateY(0.8em) ;
+  box-shadow: 0 5px 5px #9eb8a7;
+  background-color: #eee;
+  color: #9eb8a7;
 }
 
 h3 {
