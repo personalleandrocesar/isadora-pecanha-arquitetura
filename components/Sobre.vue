@@ -1,107 +1,47 @@
 <template>
-  <div class="logoAnimationOne">
+  <div class="logoAnimationSix">
 
-    <div class='main-tree'>
-      <div>
-        <h5><Icon name="material-symbols:person" /> Sobre</h5>
-      </div>
-    </div>
+
+        <div class='main-one'>
+            <NuxtLink to="/">
+              <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/inicio.png" width="70" height="70" />
+            </NuxtLink>
+            <NuxtLink to="/projetos">
+              <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
+            </NuxtLink>
+            <!-- <NuxtLink>
+              <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/clientes.png" width="70" height="70" />
+            </NuxtLink> -->
+            <NuxtLink to="/sobre">
+              <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/sobre.png" width="70" height="70" />
+            </NuxtLink>
+
+        </div>
 
 
     <div class='profile'>
-      <img @click="image" src='/img/myFotoTwo.jpg' alt='' name="Image">
       <div>
-        <h1>Leandro Cesar Ramos da Costa</h1>
+        <h1>Isadora Peçanha</h1>
         <a to="">
-           <Icon name="material-symbols:business-center-rounded" /> Empreendedor
+           <Icon name="material-symbols:business-center-rounded" /> Empreendedora
         </a>
 
       </div>
     </div>
-    <div class='main-one'>
-      <a href="https://deepacupuntura.com">
-        <Icon name="bi:building-fill" /> Dono do Deep Acupuntura
-      </a>
-      <a>
-        <Icon name="material-symbols:exercise" /> Profissional de Educação Física
-      </a>
-      <a>
-        <Icon name="healthicons:award-ribbon" /> Acupunturista
-      </a>
-      <a>
-        <Icon name="material-symbols:code-blocks" /> Programador
-      </a>
-      <a>
-       <Icon name="material-symbols:sports-martial-arts-rounded" /> Instrutor de Krav-maga
-      </a>
-      <a href="https://github.com/personalleandrocesar">
-        <Icon name="mdi:github" /> @personalleandrocesar
-      </a>
-      <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&id=K4268569U7">
-        <Icon name="ph:files-bold" /> Currículo Lattes - CNPQ
-      </a>
-    </div>
-<br>
-    <div class='main-four'>
-      <div class='main-four-card'>
-        <p>
-         <Icon name="solar:square-academic-cap-2-bold" /> Graduação em Educação Física - UNIVERSIDADE SALGADO DE OLIVEIRA -
-          UNIVERSO (2005 - 2008);
-          <br>
-          <Icon name="mingcute:certificate-fill" /> Pós-Graduação Lato-Sensu (especialização) em Acupuntura - UNIVERSIDADE
-          CELSO LISBOA - UCL (2018 - 2022);
-          <!-- <br>
-          <Icon name="material-symbols:business-center-rounded" /> Graduando em Análise e Desenvolvimento de Sistemas - 
-          UNIVERSIDADE ESTÁCIO - ESTÁCIO (2023 - atual);
-        -->
-          <br> 
-          <Icon name="mingcute:certificate-line" /> Pós-Graduando em Cinesiologia, Biomecânica e Treinamento Físico -
-          UNIVERSIDADE CASTELO BRANCO - UCB (2021 - atual);
-          <br>
-          <Icon name="mingcute:certificate-line" /> Pós-Graduando em Lesões e Doenças Musculoesqueléticas: Exercício
-          Físico e Reabilitação - UNIVERSIDADE CASTELO BRANCO - UCB (2021 - atual);
-          <br>
-          <Icon name="game-icons:kimono" /> Instrutor de Krav-maga (Brown Belt) - BUKAN;
-          <br>
-          <Icon name="iconoir:yoga" /> Quase Professor de Yoga - SHIVA STUDIO;
-        </p>
 
-      </div>
-    </div>
-<div class="main-two">
-  <div>
-    
-    <a href="https://api.whatsapp.com/send?phone=5521936184024%20&text=Ol%C3%A1%20Leandro%20Cesar,%20fiquei%20interessado(a)%20na%20sua%20Consultoria%20e%20nos%20seus%20Servi%C3%A7os,%20me%20chamo%20">
-      <Icon name="fa6-brands:square-whatsapp" /> WhatsApp
-    </a>
-    <a href="mailto:personal@leandrocesar.com">
-      <Icon name="ic:outline-alternate-email" /> E-mail
-    </a>
-    <a href="https://github.com/personalleandrocesar">
-      <Icon name="mdi:github" /> GitHub
-    </a>
-    
-    <a href="https://instagram.com/personalleandrocesar">
-      <Icon name="uil:instagram-alt" /> Instagram
-    </a>
-    <a href="https://www.youtube.com/@personalleandrocesar">
-      <Icon name="ph:youtube-logo-fill" /> Youtube
-    </a>
-  </div>
-</div>
 
 <div class='main-tree'>
   <div>
-        
+
         <h5><Icon name="mdi:timeline-check" /> Linha do tempo</h5>
         <ContentSlot name="imc-one"/>
       </div>
     </div>
-    
+
     <div class='main-five'>
       <div class='main-five-card'>
-        <!-- <h4 class='dateYear'>|</h4>
-        <h4 @click='doisTres' class='dateYear' :class='{ dateYearHover: aplicarNine }'>2023</h4> -->
+        <h4 class='dateYear'>|</h4>
+        <h4 @click='doisTres' class='dateYear' :class='{ dateYearHover: aplicarNine }'>2023</h4>
         <h4 class='dateYear'>|</h4>
         <h4 @click='doisDois' class='dateYear' :class='{ dateYearHover: aplicarEight }'>2022</h4>
         <h4 class='dateYear'>|</h4>
@@ -109,37 +49,27 @@
         <h4 class='dateYear'>|</h4>
         <h4 @click='umOito' class='dateYear' :class='{ dateYearHover: aplicarTwo }'> 2018</h4>
         <h4 class='dateYear'>|</h4>
-        <h4 @click='umSete' class='dateYear' :class='{ dateYearHover: aplicarTree }'> 2017</h4>
-        <h4 class='dateYear'>|</h4>
-        <h4 @click='umUm' class='dateYear' :class='{ dateYearHover: aplicarFour }'> 2011</h4>
-        <h4 class='dateYear'>|</h4>
-        <h4 @click='zeroOito' class='dateYear' :class='{ dateYearHover: aplicarFive }'> 2008</h4>
-        <h4 class='dateYear'>|</h4>
-        <h4 @click='zeroCinco' class='dateYear' :class='{ dateYearHover: aplicarSix }'> 2005</h4>
-        <h4 class='dateYear'>|</h4>
-        <h4 @click='oitoSeis' class='dateYear' :class='{ dateYearHover: aplicarSeven }'> 1986</h4>
-        <h4 class='dateYear'>|</h4>
         <br>
-        
+
       </div>
+      <div class='vAcontecimentos' v-html='acontecimentos'></div>
     </div>
-    
+
     <div class='main-six'>
       <div class='main-six-card'>
-        <div v-html='acontecimentos'></div>
-        
+
       </div>
     </div>
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     <br>
     <br>
     <br>
-    
+
   </div>
 </template>
 <script>
@@ -195,7 +125,7 @@ export default {
               Site deepacupuntura.com no ar;
             </li>
             <li>
-              Curso de aprimoramento teórico e prático de Acupuntura Escalpiana de Jiao Shunfa; 
+              Curso de aprimoramento teórico e prático de Acupuntura Escalpiana de Jiao Shunfa;
             </li>
             <li>
               Início dos trabalhos da Deep Acupuntura na academia BodyClass;
@@ -218,14 +148,14 @@ export default {
         <h4 style="margin-left: 10px;"> Novembro</h4>
           <ul class="com-bullet com-indent">
             <li>
-              Início do curso de Pós-Graduação em Cinesiologia, Biomecânica e Treinamento Físico - Universidade 
-              Castelo Branco - UCB;     
+              Início do curso de Pós-Graduação em Cinesiologia, Biomecânica e Treinamento Físico - Universidade
+              Castelo Branco - UCB;
             </li>
           </ul>
           <h4 style="margin-left: 10px;"> Julho</h4>
           <ul class="com-bullet com-indent">
             <li>
-              Início do curso de Pós-Graduação em Lesões e Doenças Musculoesqueléticas: Exercício Físico e Reabilitação - Universidade 
+              Início do curso de Pós-Graduação em Lesões e Doenças Musculoesqueléticas: Exercício Físico e Reabilitação - Universidade
               Castelo Branco - UCB;
             </li>
           </ul>
@@ -389,7 +319,7 @@ export default {
               Site deepacupuntura.com no ar;
             </li>
             <li>
-              Curso de aprimoramento teórico e prático de Acupuntura Escalpiana de Jiao Shunfa; 
+              Curso de aprimoramento teórico e prático de Acupuntura Escalpiana de Jiao Shunfa;
             </li>
             <li>
               Início dos trabalhos da Deep Acupuntura na academia BodyClass;
@@ -419,7 +349,7 @@ export default {
     },
 
   }
-} 
+}
 </script>
 
 <style scoped>
@@ -457,107 +387,45 @@ code {
   background-color: #fadb4154;
 }
 
-.nav-one {
-  height: 35px;
-  position: sticky;
-  top: -1px;
-}
-
-.nav-one div {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.nav-one a {
-  text-decoration: none;
-  margin: 0 14px 0 6px;
-  font-size: 1.2em;
-}
-
-.nav-one p path {
-  text-decoration: none;
-  margin: 0 14px 0 6px;
-  font-size: 1.2em;
-}
-
-.nav-one path {
-  color: #0000FF;
-  margin-top: 8px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center ;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 10px 0 5px 0;
-  color: var(--color-text);
-}
-
-.profile a {
-  text-decoration: none;
-  color: var(--color-text);
-  font-size: .9em;
-  margin-left: 20px;
-}
-
-.profile img {
-  height: 90px;
-  border-radius: 50%;
-  margin-left: 10px;
-  padding: 0 25px 0 0;
-}
-
-.profile h1 {
-  margin: 5px 10px 0 10px;
-  font-size: 1.3em;
-  color: #fadb41;
-}
-
-
-.profile h4 {
-  margin: 0 0 0 -10px;
-  font-size: .9em;
-  font-weight: 100;
-  color: var(--color-text);
-}
 
 .main-one {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  padding: 10px 0 15px 0;
-  color: var(--color-text);
-}
-
-.main-one div {
-  margin: 0 0 0 15px;
-}
-
-.main-one a:nth-child(1) .icon {
-  padding-right: 2px;
-  text-decoration: underline;
-  margin: 0 0 0 2px;
-}
-
-.main-one a:nth-child(2) .icon {
-  padding-right: 0px;
-  margin: 0 0 0 -1px;
-}
-
-.main-one a:nth-child(3) .icon {
-  padding-right: 2px;
-  margin: 0 0 0 0px;
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
+    align-items:center;
+    flex-wrap: wrap;
+    margin:32px 20px 30px 20px;
 }
 
 .main-one a {
-  margin: 0 0 0 10px;
-  color: var(--color-text);
+  transition: all .4s linear;
+  border: solid .1px var(--color-border);
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  align-items:center;
+  flex-wrap: wrap;
+  transform: translateY(1em);
+  box-shadow: 0 .5px .5px #9eb8a7;
 }
+
+.main-one a:hover {
+  transform: translateY(0.9em) ;
+  box-shadow: 0 4px 4px #9eb8a7;
+  color: #9eb8a7;
+  background-color: #eee;
+}
+
+.main-one a.router-link-exact-active {
+  transform: translateY(1em);
+box-shadow: 0 4px 4px #99bca6;
+  color: #9eb8a7;
+  background-color: #eee;
+}
+
 .main-two {
   display: flex;
   justify-content: center;
@@ -574,7 +442,7 @@ code {
     flex-wrap: wrap;
     margin-bottom: 20px;
   }
-  
+
 .main-two .icon {
   font-size: 20px;
   margin: 2px 0;
@@ -634,7 +502,7 @@ code {
 }
 
 .main-tree h5 {
-  margin-left: 10px;
+  margin-left: 25px;
 }
 
 .main-four {
@@ -719,7 +587,7 @@ i:nth-child(15) {
 .main-five {
   display: flex;
   justify-content: flex-start;
-  flex-direction: column;
+  flex-direction: row;
   margin: 10px 0 0 0;
   color: var(--color-text);
   overflow-x: auto;
@@ -736,13 +604,14 @@ i:nth-child(15) {
 
 .main-five-card {
   display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
+  justify-content: felx-start;
+  flex-direction: column;
   margin-bottom: 7px;
+  align-items: center;
 }
 
 .main-five-card a {
-  border: solid .1px #fadb41;
+  border: solid .1px var(--color-text);
   margin: 0px 5px 20px 10px;
   width: 500px;
   border-radius: 3% 3% 3% 3%;
@@ -761,6 +630,11 @@ i:nth-child(15) {
 .main-five-card p {
   margin: 0 0 0 10px;
   font-size: .8em;
+}
+
+.vAcontecimentos {
+  border-left: solid 4px var(--color-text);
+  margin-left: 15px;
 }
 
 .main-six {
@@ -876,12 +750,13 @@ i:nth-child(15) {
 }
 
 .dateYear {
-  color: #ccc;
+  color: var(--color-text);
   cursor: pointer;
 }
 
 .dateYearHover {
-  color: #fadb41;
+  color: #fff;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 369px) {}

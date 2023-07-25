@@ -5,8 +5,8 @@ useHead({
 </script>
 
 <template>
-    <main>
-        <LogoHome />
-        <TheWelcome />
-    </main>
+  <main>
+    <LogoHome />
+    <TheWelcome />
+  </main>
 </template>

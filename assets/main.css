@@ -1,6 +1,8 @@
 @import './base.css';
 
-*{ font-family: "Lato";}
+*{
+  font-family: "Lato";
+}
 
 #app {
   font-family: 'Lato', sans-serif;
@@ -160,7 +162,7 @@ a,
 
 .logoAnimationSix {
   animation-direction: top;
-  animation: opacityAnimation 12s;
+  animation: opacityAnimation .5s;
 }
 
 .logoAnimationSeven {

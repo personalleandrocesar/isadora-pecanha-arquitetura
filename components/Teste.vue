@@ -1,12 +1,4 @@
-<script>
-export default {
-  methods: {
-    scrollToTop() {
-      window.scrollTo(0, 0);
-    }
-  }
-}
-</script>
+
 
 <template>
   <div class="homeAnimation">
@@ -52,19 +44,20 @@ export default {
       </div>
 
     </div>
-    <div class='main-tree'>
+    <div class='main-tree logoAnimationSevenTwo'>
         <NuxtLink to="/projetos">
           <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
         </NuxtLink>
-        <NuxtLink>
+        <!-- <NuxtLink>
           <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/clientes.png" width="70" height="70" />
-        </NuxtLink>
+        </NuxtLink> -->
         <NuxtLink to="/sobre">
           <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/sobre.png" width="70" height="70" />
         </NuxtLink>
 
     </div>
   <NuxtPage />
+
 </template>
 <style scoped>
 
@@ -251,7 +244,7 @@ code {
 .main-tree a {
   transition: all .4s linear;
   border: solid .1px var(--color-border);
-  border-radius: 15px;
+  border-radius: 50px;
   height: 80px;
   width: 80px;
   display: flex;

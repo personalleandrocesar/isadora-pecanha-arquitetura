@@ -8,8 +8,6 @@ useHead({
 </script>
 <template>
   <main>
-    <Nav />
-    <Sobre />
-    <NavBottomTwo />
+    <Projetos />
   </main>
 </template>

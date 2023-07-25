@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  titleTemplate: '%s | Isadora Peçanha - Arquitetura',  
+  titleTemplate: 'Isadora Peçanha - Arquitetura',
 })
 </script>
 
