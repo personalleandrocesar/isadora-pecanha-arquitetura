@@ -57,6 +57,9 @@
 
     </div>
   <NuxtPage />
+  <br>
+  <br>
+
 
 </template>
 <style scoped>
