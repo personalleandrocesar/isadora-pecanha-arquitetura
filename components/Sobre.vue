@@ -19,7 +19,7 @@
         </div>
 
 
-    <div class='profile'>
+    <div class='main-two'>
       <div>
         <h1>Isadora Peçanha</h1>
         <a to="">
@@ -429,7 +429,7 @@ box-shadow: 0 4px 4px #99bca6;
 .main-two {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   padding: 0px 0 45px 0px;
   color: var(--color-text);
@@ -438,7 +438,7 @@ box-shadow: 0 4px 4px #99bca6;
 .main-two div {
   display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     margin-bottom: 20px;
   }
