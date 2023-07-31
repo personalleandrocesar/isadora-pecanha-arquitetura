@@ -1,6 +1,7 @@
 @import './base.css';
 
-*{
+
+body{
   font-family: "Lato";
 }
 
@@ -8,6 +9,16 @@
   font-family: 'Lato', sans-serif;
   font-weight: normal;
 }
+
+/* 
+*{
+  font-family: "Lato";
+}
+
+#app {
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+} */
 
 .code {
   border-left: 6px solid #ffffff;
