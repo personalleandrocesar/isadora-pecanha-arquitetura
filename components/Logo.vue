@@ -1,6 +1,3 @@
-<script setup>
-import LCLogo from '@/components/LCLogo.vue'
-</script>
 <template>
     <header>
         <div class='logo'>

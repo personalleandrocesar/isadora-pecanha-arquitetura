@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 useHead({
     titleTemplate: 'Isadora Peçanha - Arquitetura',
 })
@@ -6,7 +6,7 @@ useHead({
 
 <template>
   <main>
-    <LogoHome />
-    <TheWelcome />
+    <Logo />
+    <Home />
   </main>
 </template>

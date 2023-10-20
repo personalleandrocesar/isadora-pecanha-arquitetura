@@ -13,14 +13,14 @@ export default {
 
       <div class='main-four'>
 
-        <div class='main-four-card'>
+        <!-- <div class='main-four-card'>
           <a href="https://docs.google.com/forms/d/1xn0DHP1O2N1hCFyClRgCGdcRpA7UGcmAZoYaXSkA4Es/viewform?edit_requested=true" target="_blank" @click.native="scrollToTop()" >
             <h4>
               <Icon name="fluent:clipboard-checkmark-24-filled" />
 
             Solicite seu Orçamento </h4>
           </a>
-        </div>
+        </div> -->
 
         <div class='main-four-card'>
           <a href="https://api.whatsapp.com/send?phone=5521966579611%20&text=Ol%C3%A1%20Isadora,%20me%20chamo%20" target="_blank" @click.native="scrollToTop()">
