@@ -3,7 +3,7 @@
 
 
         <div class='main-one'>
-            <NuxtLink to="/">
+            <NuxtLink to="/teste">
               <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/inicio.png" width="70" height="70" />
             </NuxtLink>
             <NuxtLink to="/projetos">
