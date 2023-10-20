@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1',
+      viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
       link: [
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Lato&display=swap' },
         { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato&display=swap" },
