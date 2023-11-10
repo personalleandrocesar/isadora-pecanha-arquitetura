@@ -72,7 +72,6 @@ h4 .icon {
   margin: -4px 0 0 0  ;
 }
 
-
 iframe {
   margin-left: 10px;
 }
@@ -122,6 +121,7 @@ code {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  box-shadow: 0 2px 2px #9eb8a790;
 }
 
 .main-one-card a h4 {
@@ -224,7 +224,7 @@ code {
   border-radius: 15px;
   transform: translateY(1em);
   font-weight: bold ;
-
+  box-shadow: 0 2px 2px #9eb8a760;
 }
 .main-two a:hover {
   transform: translateY(0.9em) ;
@@ -255,7 +255,7 @@ code {
   align-items:center;
   flex-wrap: wrap;
   transform: translateY(1em);
-  box-shadow: 0 .5px .5px #9eb8a7;
+  box-shadow: 0 2px 2px #9eb8a790;
 }
 
 .main-tree a:hover {
