@@ -4,66 +4,64 @@
 
 <template>
   <div>
-  <!-- <div class="homeAnimation"> -->
+    <!-- <div class="homeAnimation"> -->
     <div class="main-one">
-    <div>
+      <div>
 
-    <a href="mailto:contato@isadoraarq.com">
-      <Icon name="ic:outline-alternate-email" /> E-mail
-    </a>
-    <a href="https://br.pinterest.com/ipeanha1007/">
-      <Icon name="mdi:pinterest" /> Pinterest
-    </a>
+        <a href="mailto:contato@isadoraarq.com">
+          <Icon name="ic:outline-alternate-email" /> E-mail
+        </a>
+        <a href="https://br.pinterest.com/ipeanha1007/">
+          <Icon name="mdi:pinterest" /> Pinterest
+        </a>
 
-    <a href="https://www.instagram.com/isadorapecanha_arquitetura/">
-      <Icon name="uil:instagram-alt" /> Instagram
-    </a>
-    </div>
-    </div>
-
-      <div class='main-two'>
-
-        <div class='main-two-card'>
-          <a href="https://api.whatsapp.com/send?phone=5521966579611%20&text=Ol%C3%A1%20Isadora,%20me%20chamo%20" target="_blank" @click.native="scrollToTop()">
-            <h4>
-              <Icon name="ri:whatsapp-fill" />
-
-            Nosso Contato pelo Whatsapp </h4>
-          </a>
-        </div>
-
+        <a href="https://www.instagram.com/isadorapecanha_arquitetura/">
+          <Icon name="uil:instagram-alt" /> Instagram
+        </a>
       </div>
-      <br>
+    </div>
 
+    <div class='main-two'>
 
+      <div class='main-two-card'>
+        <a href="https://api.whatsapp.com/send?phone=5521966579611%20&text=Ol%C3%A1%20Isadora,%20me%20chamo%20"
+          target="_blank" @click.native="scrollToTop()">
+          <h4>
+            <Icon name="ri:whatsapp-fill" />
+
+            Nosso Contato pelo Whatsapp
+          </h4>
+        </a>
+      </div>
 
     </div>
-    <div class='main-tree logoAnimationSevenTwo'>
-        <NuxtLink to="/projetos">
-          <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
-        </NuxtLink>
-        <!-- <NuxtLink>
-          <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/clientes.png" width="70" height="70" />
-        </NuxtLink> -->
-        <!-- <NuxtLink to="/sobre">
-        <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/sobre.png" width="70" height="70" />
-        </NuxtLink> -->
+    <br>
 
+
+
+  </div>
+  <div class='main-tree logoAnimationSevenTwo'>
+    <NuxtLink to="/projetos">
+      <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
+    </NuxtLink>
+
+  </div>
+  <div class='main-four logoAnimationSevenTwo'>
+    <div class="card">
+      
     </div>
+  </div>
   <NuxtPage />
   <br>
   <br>
-
-
 </template>
 <style scoped>
-
 i {
   color: var(--color-text);
 }
 
 h4 .icon {
-  margin: -4px 0 0 0  ;
+  margin: -4px 0 0 0;
 }
 
 
@@ -86,11 +84,11 @@ code {
 
 .main-one div {
   display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 0px;
-  }
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 0px;
+}
 
 .main-one a .icon {
   font-size: 20px;
@@ -114,16 +112,17 @@ code {
   flex-direction: column;
   align-content: center;
   flex-wrap: wrap;
-  font-size:.7em;
+  font-size: .7em;
   transition: all .4s linear;
   margin: 0px 4px 0px 4px;
   border-radius: 15px;
   transform: translateY(1em);
-  font-weight: bold ;
+  font-weight: bold;
   box-shadow: 0 2px 2px #628474;
 }
+
 .main-one a:hover {
-  transform: translateY(0.9em) ;
+  transform: translateY(0.9em);
   box-shadow: 0 4px 4px #628474;
   background-color: #eee;
   color: #628474;
@@ -133,9 +132,9 @@ code {
 .main-two {
   padding: 0 35px;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex-direction: column;
-  overflow-x:auto;
+  overflow-x: auto;
   flex-wrap: wrap;
   box-sizing: border-box;
 }
@@ -145,7 +144,7 @@ code {
   color: var(--color-text);
 }
 
-.main-two h5{
+.main-two h5 {
   margin-left: 10px;
 }
 
@@ -176,13 +175,13 @@ code {
 }
 
 .main-two-card a:hover {
-  transform: translateY(0.9em) ;
+  transform: translateY(0.9em);
   box-shadow: 0 4px 4px #628474;
   background-color: #eee;
   color: #628474;
 }
 
-.main-two-card a:hover h4{
+.main-two-card a:hover h4 {
   color: #628474;
 }
 
@@ -208,18 +207,21 @@ code {
     padding: 0 150px;
   }
 }
+
 @media only screen and (min-width: 800px) {
 
   .main-two {
     padding: 0 200px;
   }
 }
+
 @media only screen and (min-width: 950px) {
 
   .main-two {
     padding: 0 300px;
   }
 }
+
 @media only screen and (min-width: 1150px) {
 
   .main-two {
@@ -228,12 +230,12 @@ code {
 }
 
 .main-tree {
-    display: flex;
-    justify-content:flex-start;
-    flex-direction: row;
-    align-items:center;
-    flex-wrap: wrap;
-    margin:-7px 20px 30px 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: -7px 20px 30px 20px;
 }
 
 .main-tree a {
@@ -242,26 +244,26 @@ code {
   height: 80px;
   width: 80px;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   flex-direction: row;
-  align-items:center;
+  align-items: center;
   flex-wrap: wrap;
   transform: translateY(1em);
 }
 
 .main-tree a:hover {
-  transform: translateY(0.9em) ;
+  transform: translateY(0.9em);
   box-shadow: 0 4px 4px #628474;
   color: #628474;
   background-color: #eeeeee;
 }
 
 h3 {
-    color: var(--color-text);
+  color: var(--color-text);
   transition: all .3s linear;
-  margin:-15px 0 50px 30px;
+  margin: -15px 0 50px 30px;
   text-align: center;
-    font-size: .7rem;
+  font-size: .7rem;
 }
 
 h3:nth-child(2) {
@@ -269,13 +271,19 @@ h3:nth-child(2) {
 }
 
 .main-four {
-  padding: 0 40px;
   display: flex;
-  justify-content:center;
+  justify-content: center;
+  align-content: center;
   flex-direction: column;
-  overflow-x:auto;
+  overflow-x: auto;
   flex-wrap: wrap;
   box-sizing: border-box;
-  border: solid .1px var(--color-border);
+  border-bottom: solid .1px var(--color-border);
+}
+
+.card {
+  height: 350px;
+  width: 95%;
+  background-color: #62847410;
 }
 </style>

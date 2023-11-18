@@ -45,6 +45,11 @@
       <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
     </NuxtLink>
 
+  </div>
+  <div class='main-four logoAnimationSevenTwo'>
+    <div class="card">
+      
+    </div>
   </div> -->
   <NuxtPage />
   <br>
@@ -266,12 +271,20 @@ h3:nth-child(2) {
 }
 
 .main-four {
-  padding: 0 40px;
   display: flex;
   justify-content: center;
+  align-content: center;
   flex-direction: column;
   overflow-x: auto;
   flex-wrap: wrap;
   box-sizing: border-box;
-  border: solid .1px var(--color-border);
-}</style>
+  border-bottom: solid .1px var(--color-border);
+}
+
+.card {
+  height: 350px;
+  width: 95%;
+  background-color: #62847410;
+}
+
+</style>

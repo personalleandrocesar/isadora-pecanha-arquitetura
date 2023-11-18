@@ -60,6 +60,11 @@ const clickMenu = () => {
     font-weight: bolder;
     margin: 20px;
 }
+.menuMain a:hover div{
+    color: #628474 ;
+    font-weight: bolder;
+    margin: 20px;
+}
 .menuMain a.router-link-exact-active div{
     color: #628474 ;
     font-weight: bolder;
