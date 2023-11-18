@@ -13,7 +13,7 @@
     <div class='main-two'>
       <div>
         <h1>Isadora Peçanha</h1>
-        <img src="@/img/isadora.png">
+        <img src="img/isadora.png">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. 
           Alias ipsa a pariatur ab id delectus odio, quam placeat ea 
