@@ -21,7 +21,7 @@ const clickMenu = () => {
                     
                       </div>
                     </NuxtLink>
-                    <NuxtLink to="/deep" class="degrau">
+                    <NuxtLink to="/sobre" class="degrau">
                       <div>
                         Sobre
                     
