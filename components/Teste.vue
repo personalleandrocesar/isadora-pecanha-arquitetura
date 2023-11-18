@@ -1,19 +1,29 @@
-<script>
-export default {
-  methods: {
-    scrollToTop() {
-      window.scrollTo(0, 0);
-    }
-  }
-}
+<script setup>
+
 </script>
 
 <template>
-  <div class="homeAnimation">
+  <div>
+  <!-- <div class="homeAnimation"> -->
+    <div class="main-one">
+    <div>
 
-      <div class='main-one'>
+    <a href="mailto:contato@isadoraarq.com">
+      <Icon name="ic:outline-alternate-email" /> E-mail
+    </a>
+    <a href="https://br.pinterest.com/ipeanha1007/">
+      <Icon name="mdi:pinterest" /> Pinterest
+    </a>
 
-        <div class='main-one-card'>
+    <a href="https://www.instagram.com/isadorapecanha_arquitetura/">
+      <Icon name="uil:instagram-alt" /> Instagram
+    </a>
+    </div>
+    </div>
+
+      <div class='main-two'>
+
+        <div class='main-two-card'>
           <a href="https://api.whatsapp.com/send?phone=5521966579611%20&text=Ol%C3%A1%20Isadora,%20me%20chamo%20" target="_blank" @click.native="scrollToTop()">
             <h4>
               <Icon name="ri:whatsapp-fill" />
@@ -26,21 +36,6 @@ export default {
       <br>
 
 
-      <div class="main-two">
-      <div>
-
-      <a href="mailto:contato@isadoraarq.com">
-        <Icon name="ic:outline-alternate-email" /> E-mail
-      </a>
-      <a href="https://br.pinterest.com/ipeanha1007/">
-        <Icon name="mdi:pinterest" /> Pinterest
-      </a>
-
-      <a href="https://www.instagram.com/isadorapecanha_arquitetura/">
-        <Icon name="uil:instagram-alt" /> Instagram
-      </a>
-      </div>
-      </div>
 
     </div>
     <div class='main-tree logoAnimationSevenTwo'>
@@ -50,9 +45,9 @@ export default {
         <!-- <NuxtLink>
           <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/clientes.png" width="70" height="70" />
         </NuxtLink> -->
-        <NuxtLink to="/sobre">
-          <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/sobre.png" width="70" height="70" />
-        </NuxtLink>
+        <!-- <NuxtLink to="/sobre">
+        <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/sobre.png" width="70" height="70" />
+        </NuxtLink> -->
 
     </div>
   <NuxtPage />
@@ -65,16 +60,12 @@ export default {
 
 i {
   color: var(--color-text);
-  margin: auto;
 }
 
 h4 .icon {
   margin: -4px 0 0 0  ;
 }
 
-iframe {
-  margin-left: 10px;
-}
 
 code {
   font-size: 0.5em;
@@ -84,103 +75,6 @@ code {
 }
 
 .main-one {
-  padding: 0 40px;
-  display: flex;
-  justify-content:center;
-  flex-direction: column;
-  overflow-x:auto;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-}
-
-.main-one i {
-  font-size: 1.2em;
-  color: var(--color-text);
-}
-
-.main-one h5{
-  margin-left: 10px;
-}
-
-.main-one-card {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-
-.main-one-card a {
-  width: 100%;
-  border-radius: 30px;
-  flex-direction: row;
-  border: solid .1px var(--color-border);
-  box-shadow: 0 2px 2px var(--color-border);
-  margin: 0px 5px 20px 0px;
-  transform: translateY(1em);
-  transition: all .4s linear;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  box-shadow: 0 2px 2px #9eb8a790;
-}
-
-.main-one-card a h4 {
-  transition: all .4s linear;
-}
-
-.main-one-card a:hover {
-  transform: translateY(0.9em) ;
-  box-shadow: 0 4px 4px #9eb8a7;
-  background-color: #eee;
-  color: #9eb8a7;
-}
-
-.main-one-card a:hover h4{
-  color: #9eb8a7;
-}
-
-.main-one-card span {
-  position: relative;
-  top: -6px;
-  left: -14px;
-}
-
-.main-one-card h4 {
-  padding: 10px;
-  color: var(--color-text);
-}
-
-.main-one-card p {
-  font-size: .8em;
-}
-
-
-
-@media only screen and (min-width: 620px) {
-  .main-one {
-    padding: 0 150px;
-  }
-}
-@media only screen and (min-width: 800px) {
-
-  .main-one {
-    padding: 0 200px;
-  }
-}
-@media only screen and (min-width: 950px) {
-
-  .main-one {
-    padding: 0 300px;
-  }
-}
-@media only screen and (min-width: 1150px) {
-
-  .main-one {
-    padding: 0 400px;
-  }
-}
-
-.main-two {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -190,33 +84,35 @@ code {
   transition: all .4s linear;
 }
 
-.main-two div {
+.main-one div {
   display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
-.main-two a .icon {
+.main-one a .icon {
   font-size: 20px;
-  margin: 2px 0;
+  margin: 2px 3px 2px -2px;
 }
 
-.main-two a .icon:hover {
-  margin: 2px 0;
+.main-one a .icon:hover {
+  margin: 2px 3px;
+  font-size: 20px;
 }
 
 
-.main-two a {
+.main-one a {
   border: solid .1px var(--color-border);
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 100px;
   color: var(--color-text);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  align-content: center;
   flex-wrap: wrap;
   font-size:.7em;
   transition: all .4s linear;
@@ -224,19 +120,115 @@ code {
   border-radius: 15px;
   transform: translateY(1em);
   font-weight: bold ;
-  box-shadow: 0 2px 2px #9eb8a760;
+  box-shadow: 0 2px 2px #628474;
 }
-.main-two a:hover {
+.main-one a:hover {
   transform: translateY(0.9em) ;
-  box-shadow: 0 4px 4px #9eb8a7;
+  box-shadow: 0 4px 4px #628474;
   background-color: #eee;
-  color: #9eb8a7;
+  color: #628474;
 }
 
+.main-two {
+  padding: 0 40px;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  overflow-x:auto;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.main-two i {
+  font-size: 1.2em;
+  color: var(--color-text);
+}
+
+.main-two h5{
+  margin-left: 10px;
+}
+
+.main-two-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.main-two-card a {
+  width: 100%;
+  border-radius: 30px;
+  flex-direction: row;
+  border: solid .1px var(--color-border);
+  box-shadow: 0 2px 2px var(--color-border);
+  margin: 0px 5px 60px 0px;
+  transform: translateY(1em);
+  transition: all .4s linear;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 2px #62847490;
+}
+
+.main-two-card a h4 {
+  transition: all .4s linear;
+}
+
+.main-two-card a:hover {
+  transform: translateY(0.9em) ;
+  box-shadow: 0 4px 4px #628474;
+  background-color: #eee;
+  color: #628474;
+}
+
+.main-two-card a:hover h4{
+  color: #628474;
+}
+
+.main-two-card span {
+  position: relative;
+  top: -6px;
+  left: -14px;
+}
+
+.main-two-card h4 {
+  padding: 10px;
+  color: var(--color-text);
+}
+
+.main-two-card p {
+  font-size: .8em;
+}
+
+
+
+@media only screen and (min-width: 620px) {
+  .main-two {
+    padding: 0 150px;
+  }
+}
+@media only screen and (min-width: 800px) {
+
+  .main-two {
+    padding: 0 200px;
+  }
+}
+@media only screen and (min-width: 950px) {
+
+  .main-two {
+    padding: 0 300px;
+  }
+}
+@media only screen and (min-width: 1150px) {
+
+  .main-two {
+    padding: 0 400px;
+  }
+}
 
 .main-tree {
     display: flex;
-    justify-content:space-around;
+    justify-content:flex-start;
     flex-direction: row;
     align-items:center;
     flex-wrap: wrap;
@@ -245,7 +237,6 @@ code {
 
 .main-tree a {
   transition: all .4s linear;
-  border: solid .1px var(--color-border);
   border-radius: 50px;
   height: 80px;
   width: 80px;
@@ -255,14 +246,14 @@ code {
   align-items:center;
   flex-wrap: wrap;
   transform: translateY(1em);
-  box-shadow: 0 2px 2px #9eb8a790;
+  background-color: #eeeeee50;
 }
 
 .main-tree a:hover {
   transform: translateY(0.9em) ;
-  box-shadow: 0 4px 4px #9eb8a7;
-  color: #9eb8a7;
-  background-color: #eee;
+  box-shadow: 0 4px 4px #628474;
+  color: #628474;
+  background-color: #eeeeee;
 }
 
 h3 {

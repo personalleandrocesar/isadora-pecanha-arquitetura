@@ -6,6 +6,7 @@ useHead({
 
 <template>
   <main>
+    <Menu/>
     <Logo />
     <Teste />
   </main>

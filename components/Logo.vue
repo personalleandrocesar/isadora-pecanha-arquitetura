@@ -32,7 +32,7 @@ export default {
     align-items: center;
     flex-wrap: wrap;
     margin-top: 1rem;
-    font-family: 'Architects Daughter', cursive;;
+    font-family: 'Architects Daughter', cursive;
 }
 
 
@@ -40,18 +40,19 @@ h1 {
     margin-top: -1.5rem;
     font-size: 1.7rem;
     color: var(--color-heading);
+    font-family: 'Lato'
   }
 
 h3 {
     color: var(--color-text);
   transition: all .3s linear;
-  margin:-7px 0 50px 0;
+  margin:-7px 0 10px 0;
   text-align: center;
     font-size: .9rem;
 }
 
 h3:nth-child(2) {
-  margin-top: -60px;
+  margin-top: 60px;
 }
 
 </style>
