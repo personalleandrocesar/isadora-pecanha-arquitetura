@@ -1,28 +1,18 @@
 <template>
     <header>
-        <div class='logo'>
-
-            <img alt="Isadora Peçanha Arquitetura Logo" class="logo" src="@/assets/logo.png" width="100" height="100" />
-            <span class='logoAnimationSeven'>
-                <h1>ISADORA PEÇANHA</h1>
-            </span>
-            <span class='logoAnimationSevenTwo'>
-                <h3>ARQUITETURA E INTERIORES</h3>
-            </span>
-        </div>
+            <NuxtLink to="/" class='logo'>
+                
+                <img alt="Isadora Peçanha Arquitetura Logo" class="logo" src="@/assets/logo.png" width="100" height="100" />
+                <span class='logoAnimationSeven'>
+                    <h1>ISADORA PEÇANHA</h1>
+                </span>
+                <span class='logoAnimationSevenTwo'>
+                    <h3>ARQUITETURA E INTERIORES</h3>
+                </span>
+            </NuxtLink>
     </header>
 
 </template>
-<script>
-export default {
-    methods: {
-        scrollToTop() {
-            window.scrollTo(0, 0);
-        }
-    },
-}
-
-</script>
 
 <style scoped>
 .logo {
@@ -40,6 +30,7 @@ h1 {
     margin-top: -1.2rem;
     font-size: .9rem;
     color: var(--color-heading);
+    font-family: "Lato";
   }
 
 h3 {

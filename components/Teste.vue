@@ -98,8 +98,8 @@ code {
 }
 
 .main-one a .icon:hover {
-  margin: 2px 3px;
   font-size: 20px;
+  margin: 2px 3px 2px -2px;
 }
 
 
@@ -127,10 +127,11 @@ code {
   box-shadow: 0 4px 4px #628474;
   background-color: #eee;
   color: #628474;
+  margin: 0px 4px 0px 4px;
 }
 
 .main-two {
-  padding: 0 40px;
+  padding: 0 35px;
   display: flex;
   justify-content:center;
   flex-direction: column;
@@ -246,7 +247,6 @@ code {
   align-items:center;
   flex-wrap: wrap;
   transform: translateY(1em);
-  background-color: #eeeeee50;
 }
 
 .main-tree a:hover {

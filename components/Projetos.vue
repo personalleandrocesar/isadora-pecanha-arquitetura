@@ -4,17 +4,8 @@
   <div class="logoAnimationSix">
 
     <div class='main-one'>
-        <NuxtLink to="/">
-          <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/inicio.png" width="70" height="70" />
-        </NuxtLink>
         <NuxtLink to="/projetos">
           <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
-        </NuxtLink>
-        <!-- <NuxtLink>
-          <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/clientes.png" width="70" height="70" />
-        </NuxtLink> -->
-        <NuxtLink to="/sobre">
-          <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/sobre.png" width="70" height="70" />
         </NuxtLink>
 
     </div>
@@ -47,7 +38,7 @@ code {
 
 .main-one {
     display: flex;
-    justify-content:space-around;
+    justify-content:flex-start;
     flex-direction: row;
     align-items:center;
     flex-wrap: wrap;
