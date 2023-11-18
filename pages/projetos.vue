@@ -8,6 +8,7 @@ useHead({
 </script>
 <template>
   <main>
+    <Menu/>
     <LogoTwo/>
     <Projetos />
   </main>

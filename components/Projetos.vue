@@ -42,12 +42,11 @@ code {
     flex-direction: row;
     align-items:center;
     flex-wrap: wrap;
-    margin:32px 20px 30px 20px;
+    margin: 20px 20px 30px 20px;
 }
 
 .main-one a {
   transition: all .4s linear;
-  border: solid .1px var(--color-border);
   border-radius: 50px;
   height: 80px;
   width: 80px;
@@ -57,21 +56,12 @@ code {
   align-items:center;
   flex-wrap: wrap;
   transform: translateY(1em);
-  box-shadow: 0 .5px .5px #9eb8a7;
+  box-shadow: 0 .2px .2px #9eb8a7;
 }
 
-.main-one a:hover {
-  transform: translateY(0.9em) ;
-  box-shadow: 0 4px 4px #9eb8a7;
-  color: #9eb8a7;
-  background-color: #eee;
-}
 
 .main-one a.router-link-exact-active {
-  transform: translateY(1em);
-box-shadow: 0 4px 4px #99bca6;
-  color: #9eb8a7;
-  background-color: #eee;
+box-shadow: 0 2px 2px #99bca6;
 }
 
 
