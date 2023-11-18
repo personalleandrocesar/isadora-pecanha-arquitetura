@@ -10,6 +10,7 @@ useHead({
 
 <template>
   <main>
+    <Menu/>
     <Logo />
     <Home />
   </main>

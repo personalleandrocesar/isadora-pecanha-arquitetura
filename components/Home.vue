@@ -1,73 +1,64 @@
-<script>
-export default {
-  methods: {
-    scrollToTop() {
-      window.scrollTo(0, 0);
-    }
-  }
-}
+<script setup>
+
 </script>
 
 <template>
-  <div class="homeAnimation">
-
-      <div class='main-four'>
-
-        <!-- <div class='main-four-card'>
-          <a href="https://docs.google.com/forms/d/1xn0DHP1O2N1hCFyClRgCGdcRpA7UGcmAZoYaXSkA4Es/viewform?edit_requested=true" target="_blank" @click.native="scrollToTop()" >
-            <h4>
-              <Icon name="fluent:clipboard-checkmark-24-filled" />
-
-            Solicite seu Orçamento </h4>
-          </a>
-        </div> -->
-
-        <div class='main-four-card'>
-          <a href="https://api.whatsapp.com/send?phone=5521966579611%20&text=Ol%C3%A1%20Isadora,%20me%20chamo%20" target="_blank" @click.native="scrollToTop()">
-            <h4>
-              <Icon name="ri:whatsapp-fill" />
-
-            Nosso Contato pelo Whatsapp </h4>
-          </a>
-        </div>
-
-      </div>
-      <br>
-
-
-      <div class="main-two">
+  <div>
+    <!-- <div class="homeAnimation"> -->
+    <div class="main-one">
       <div>
 
-      <a href="mailto:contato@isadoraarq.com">
-        <Icon name="ic:outline-alternate-email" /> E-mail
-      </a>
-      <a href="https://br.pinterest.com/ipeanha1007/">
-        <Icon name="mdi:pinterest" /> Pinterest
-      </a>
+        <a href="mailto:contato@isadoraarq.com">
+          <Icon name="ic:outline-alternate-email" /> E-mail
+        </a>
+        <a href="https://br.pinterest.com/ipeanha1007/">
+          <Icon name="mdi:pinterest" /> Pinterest
+        </a>
 
-      <a href="https://www.instagram.com/isadorapecanha_arquitetura/">
-        <Icon name="uil:instagram-alt" /> Instagram
-      </a>
+        <a href="https://www.instagram.com/isadorapecanha_arquitetura/">
+          <Icon name="uil:instagram-alt" /> Instagram
+        </a>
       </div>
+    </div>
+
+    <div class='main-two'>
+
+      <div class='main-two-card'>
+        <a href="https://api.whatsapp.com/send?phone=5521966579611%20&text=Ol%C3%A1%20Isadora,%20me%20chamo%20"
+          target="_blank" @click.native="scrollToTop()">
+          <h4>
+            <Icon name="ri:whatsapp-fill" />
+
+            Nosso Contato pelo Whatsapp
+          </h4>
+        </a>
       </div>
 
     </div>
+    <br>
+
+
+
+  </div>
+  <!-- <div class='main-tree logoAnimationSevenTwo'>
+    <NuxtLink to="/projetos">
+      <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
+    </NuxtLink>
+
+  </div> -->
+  <NuxtPage />
+  <br>
+  <br>
 </template>
 <style scoped>
-
 i {
   color: var(--color-text);
-  margin: auto;
 }
 
 h4 .icon {
-  margin: -4px 0 0 0  ;
+  margin: -4px 0 0 0;
 }
 
-
-iframe {
-  margin-left: 10px;
-}
 
 code {
   font-size: 0.5em;
@@ -76,172 +67,211 @@ code {
   border-left: solid 5px var(--color-text);
 }
 
-.main-two {
+.main-one {
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0px 0 45px 0px;
+  padding: 0px 0 35px 0px;
   color: var(--color-text);
   transition: all .4s linear;
 }
 
-.main-two div {
+.main-one div {
   display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 0px;
+}
 
-.main-two a .icon {
+.main-one a .icon {
   font-size: 20px;
-  margin: 2px 0;
+  margin: 2px 3px 2px -2px;
 }
 
-.main-two a .icon:hover {
-  margin: 2px 0;
+.main-one a .icon:hover {
+  font-size: 20px;
+  margin: 2px 3px 2px -2px;
 }
 
 
-.main-two a {
+.main-one a {
   border: solid .1px var(--color-border);
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 100px;
   color: var(--color-text);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  align-content: center;
   flex-wrap: wrap;
-  font-size:.7em;
+  font-size: .7em;
   transition: all .4s linear;
-  margin: 0px 4px 20px 4px;
+  margin: 0px 4px 0px 4px;
   border-radius: 15px;
   transform: translateY(1em);
-  font-weight: bold ;
-
+  font-weight: bold;
+  box-shadow: 0 2px 2px #628474;
 }
-.main-two a:hover {
-  transform: translateY(0.8em) ;
-  box-shadow: 0 5px 5px #9eb8a7;
+
+.main-one a:hover {
+  transform: translateY(0.9em);
+  box-shadow: 0 4px 4px #628474;
   background-color: #eee;
-  color: #9eb8a7;
+  color: #628474;
+  margin: 0px 4px 0px 4px;
 }
 
-
-
-.main-tree {
+.main-two {
+  padding: 0 35px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
-  margin: -10px 0 10px 0;
-  color: var(--color-text);
-  overflow-x:auto;
-}
-
-.main-tree i {
-  font-size: 1.2em;
-  color: var(--color-text);
-}
-
-.main-tree h5{
-  margin-left: 10px;
-}
-
-.main-four {
-  padding: 0 40px;
-  display: flex;
-  justify-content:center;
-  flex-direction: column;
-  overflow-x:auto;
+  overflow-x: auto;
   flex-wrap: wrap;
   box-sizing: border-box;
 }
 
-.main-four i {
+.main-two i {
   font-size: 1.2em;
   color: var(--color-text);
 }
 
-.main-four h5{
+.main-two h5 {
   margin-left: 10px;
 }
 
-.main-four-card {
+.main-two-card {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 
-.main-four-card a {
+.main-two-card a {
   width: 100%;
   border-radius: 30px;
   flex-direction: row;
   border: solid .1px var(--color-border);
-  box-shadow: 0 0px 5px var(--color-border);
-  margin: 0px 5px 20px 0px;
+  box-shadow: 0 2px 2px var(--color-border);
+  margin: 0px 5px 60px 0px;
   transform: translateY(1em);
   transition: all .4s linear;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  box-shadow: 0 2px 2px #62847490;
 }
 
-.main-four-card a h4 {
+.main-two-card a h4 {
   transition: all .4s linear;
 }
 
-.main-four-card a:hover {
-  transform: translateY(0.8em) ;
-  box-shadow: 0 5px 5px #9eb8a7;
+.main-two-card a:hover {
+  transform: translateY(0.9em);
+  box-shadow: 0 4px 4px #628474;
   background-color: #eee;
-  color: #9eb8a7;
+  color: #628474;
 }
 
-.main-four-card a:hover h4{
-  color: #9eb8a7;
+.main-two-card a:hover h4 {
+  color: #628474;
 }
 
-.main-four-card span {
+.main-two-card span {
   position: relative;
   top: -6px;
   left: -14px;
 }
 
-.main-four-card h4 {
+.main-two-card h4 {
   padding: 10px;
   color: var(--color-text);
 }
 
-.main-four-card p {
+.main-two-card p {
   font-size: .8em;
 }
 
 
 
 @media only screen and (min-width: 620px) {
-  .main-four {
+  .main-two {
     padding: 0 150px;
   }
 }
+
 @media only screen and (min-width: 800px) {
 
-  .main-four {
+  .main-two {
     padding: 0 200px;
   }
 }
+
 @media only screen and (min-width: 950px) {
 
-  .main-four {
+  .main-two {
     padding: 0 300px;
   }
 }
+
 @media only screen and (min-width: 1150px) {
 
-  .main-four {
+  .main-two {
     padding: 0 400px;
   }
 }
-</style>
+
+.main-tree {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: -7px 20px 30px 20px;
+}
+
+.main-tree a {
+  transition: all .4s linear;
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  transform: translateY(1em);
+}
+
+.main-tree a:hover {
+  transform: translateY(0.9em);
+  box-shadow: 0 4px 4px #628474;
+  color: #628474;
+  background-color: #eeeeee;
+}
+
+h3 {
+  color: var(--color-text);
+  transition: all .3s linear;
+  margin: -15px 0 50px 30px;
+  text-align: center;
+  font-size: .7rem;
+}
+
+h3:nth-child(2) {
+  margin-top: -60px;
+}
+
+.main-four {
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow-x: auto;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  border: solid .1px var(--color-border);
+}</style>
