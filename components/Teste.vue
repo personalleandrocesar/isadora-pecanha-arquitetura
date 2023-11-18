@@ -251,12 +251,6 @@ code {
   transform: translateY(1em);
 }
 
-.main-tree a:hover {
-  transform: translateY(0.9em);
-  box-shadow: 0 4px 4px #628474;
-  color: #628474;
-  background-color: #eeeeee;
-}
 
 h3 {
   color: var(--color-text);

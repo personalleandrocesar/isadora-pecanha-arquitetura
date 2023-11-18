@@ -4,7 +4,7 @@
   <div class="logoAnimationSix">
 
     <div class='main-one'>
-        <NuxtLink to="/projetos">
+        <NuxtLink>
           <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
         </NuxtLink>
 
