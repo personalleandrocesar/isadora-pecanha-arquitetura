@@ -56,13 +56,8 @@ code {
   align-items:center;
   flex-wrap: wrap;
   transform: translateY(1em);
-  box-shadow: 0 .2px .2px #9eb8a7;
 }
 
-
-.main-one a.router-link-exact-active {
-box-shadow: 0 2px 2px #99bca6;
-}
 
 
 h3 {

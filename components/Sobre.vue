@@ -3,15 +3,6 @@
 
 
         <div class='main-one'>
-            <NuxtLink to="/teste">
-              <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/inicio.png" width="70" height="70" />
-            </NuxtLink>
-            <NuxtLink to="/projetos">
-              <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
-            </NuxtLink>
-            <!-- <NuxtLink>
-              <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/clientes.png" width="70" height="70" />
-            </NuxtLink> -->
             <NuxtLink to="/sobre">
               <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/sobre.png" width="70" height="70" />
             </NuxtLink>
@@ -22,14 +13,17 @@
     <div class='main-two'>
       <div>
         <h1>Isadora Peçanha</h1>
-        <a to="">
-           <Icon name="material-symbols:business-center-rounded" /> Empreendedora
-        </a>
-
+        <img src="@/img/isadora.png">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Alias ipsa a pariatur ab id delectus odio, quam placeat ea 
+          rerum sunt in dolorum officia. Nam aliquid fuga quo unde 
+          adipisci.
+        </p>
       </div>
     </div>
 
-
+<!-- 
 <div class='main-tree'>
   <div>
 
@@ -53,13 +47,8 @@
 
       </div>
       <div class='vAcontecimentos' v-html='acontecimentos'></div>
-    </div>
+    </div> -->
 
-    <div class='main-six'>
-      <div class='main-six-card'>
-
-      </div>
-    </div>
 
 
 
@@ -390,7 +379,7 @@ code {
 
 .main-one {
     display: flex;
-    justify-content:space-around;
+    justify-content:flex-start;
     flex-direction: row;
     align-items:center;
     flex-wrap: wrap;
@@ -399,39 +388,24 @@ code {
 
 .main-one a {
   transition: all .4s linear;
-  border: solid .1px var(--color-border);
   border-radius: 50px;
   height: 80px;
   width: 80px;
   display: flex;
-  justify-content:space-around;
+  justify-content:flex-start;
   flex-direction: row;
   align-items:center;
   flex-wrap: wrap;
   transform: translateY(1em);
-  box-shadow: 0 .5px .5px #9eb8a7;
 }
 
-.main-one a:hover {
-  transform: translateY(0.9em) ;
-  box-shadow: 0 4px 4px #9eb8a7;
-  color: #9eb8a7;
-  background-color: #eee;
-}
-
-.main-one a.router-link-exact-active {
-  transform: translateY(1em);
-box-shadow: 0 4px 4px #99bca6;
-  color: #9eb8a7;
-  background-color: #eee;
-}
 
 .main-two {
   display: flex;
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 0px 0 45px 0px;
+  padding: 0px 0 45px 20px;
   color: var(--color-text);
 }
 
@@ -440,52 +414,22 @@ box-shadow: 0 4px 4px #99bca6;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-bottom: 20px;
   }
 
-.main-two .icon {
-  font-size: 20px;
-  margin: 2px 0;
-  transition: all .4s linear;
-}
+  .main-two h1 {
+    margin-bottom: 30px;
+  }
 
-.main-two a:hover:nth-child(1) .icon {
-  color: green;
-}
-.main-two a:hover:nth-child(2) .icon {
-  color: orange
-}
-.main-two a:hover:nth-child(3) .icon {
-  color: #9b9b9b;
-}
-.main-two a:hover:nth-child(4) .icon {
-  color: #C13584;
-}
-.main-two a:hover:nth-child(5) .icon {
-  color: red;
-}
+  .main-two p {
+    margin-top: 30px;
+  }
 
 
-.main-two a {
-  border: solid .1px #fadb4154;
-  height: 55px;
-  width: 55px;
-  color: var(--color-text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  font-size:.7em;
-  transition: all .4s linear;
-  margin: 0px 4px 20px 4px;
-  border-radius: 15% 15% 15% 15%;
+.main-two img {
+  margin: 0 60px;
+  width: 80%;
+  margin: auto;
 }
-.main-two a:hover {
-  background-color: #fadb4110;
-  color: var(--color-text);
-}
-
 
 .main-tree {
   display: flex;

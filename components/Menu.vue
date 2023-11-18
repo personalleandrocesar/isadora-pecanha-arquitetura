@@ -15,7 +15,7 @@ const clickMenu = () => {
     </div>
 
     <div v-if="openMenu" class="menuMain">        
-                    <NuxtLink to="/Projetos" class="degrau">
+                    <NuxtLink to="/projetos" class="degrau">
                       <div>
                         Projetos
                     
