@@ -1,4 +1,13 @@
 <script setup>
+const route = useRoute()
+
+const data = await useFetch(`/api/${route.params.id}`)
+
+const photoView = () => {
+  return data
+}
+
+console.log(data);
 
 </script>
 
@@ -40,17 +49,22 @@
 
 
   </div>
-  <!-- <div class='main-tree logoAnimationSevenTwo'>
-    <NuxtLink to="/projetos">
-      <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
-    </NuxtLink>
+  <!-- 
 
-  </div>
-  <div class='main-four logoAnimationSevenTwo'>
-    <div class="card">
+    <div class='main-tree'>
+      <NuxtLink to="/projetos">
+        <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
+      </NuxtLink>
       
-    </div>
-  </div> -->
+  </div>
+  <div class='main-four' >
+    <ul >
+      <li v-for="projects in photoView()" class="card" >
+        <img :src="projects"/>
+      </li>
+    </ul>
+  </div>
+-->
   <NuxtPage />
   <br>
   <br>
@@ -251,12 +265,6 @@ code {
   transform: translateY(1em);
 }
 
-.main-tree a:hover {
-  transform: translateY(0.9em);
-  box-shadow: 0 4px 4px #628474;
-  color: #628474;
-  background-color: #eeeeee;
-}
 
 h3 {
   color: var(--color-text);
@@ -271,20 +279,37 @@ h3:nth-child(2) {
 }
 
 .main-four {
+  border-bottom: solid .1px var(--color-border);
+}
+
+.card {
+  overflow-y: hidden;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
   overflow-x: auto;
   flex-wrap: wrap;
-  box-sizing: border-box;
-  border-bottom: solid .1px var(--color-border);
+  
+}
+.card img{
+  height: 250px;
+  width: 90%;
+  animation: all .4s linear;
+  overflow-y: hidden;
+  opacity: 1;
+  
 }
 
-.card {
-  height: 350px;
-  width: 95%;
-  background-color: #62847410;
+.card img:hover {
+  opacity: .3;
+}
+.card img:hover::after {
+  content: "Apartamento 402";
+  position: relative;
+  top: -100px;
+  color: black
 }
 
 </style>
