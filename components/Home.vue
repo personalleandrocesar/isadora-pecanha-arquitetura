@@ -51,18 +51,18 @@ const photoView = () => {
 
     <div class='main-tree'>
       <NuxtLink to="/projetos">
-      <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
-    </NuxtLink>
-    
-  </div>
-  <div class='main-four' >
-    <ul >
-      <li v-for="item in photoView()" class="card" >
-        <img :src="item.img"/>
-      </li>
-    </ul>
-  </div>
--->
+        <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
+      </NuxtLink>
+      
+    </div>
+    <div class='main-four' >
+      <ul >
+        <li v-for="item in photoView()" class="card" >
+          <img :src="item.img"/>
+        </li>
+      </ul>
+    </div>
+  -->
   <NuxtPage />
   <br>
   <br>
@@ -278,22 +278,19 @@ h3:nth-child(2) {
 
 .main-four {
   border-bottom: solid .1px var(--color-border);
+  width: 100%;
 }
 
 .card {
-  overflow-y: hidden;
-  margin: auto;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  overflow-x: auto;
   flex-wrap: wrap;
+  width: 90%;
   
 }
 .card img{
-  width: 90%;
-  height: 200px;
   animation: all .4s linear;
   overflow-y: hidden;
   opacity: 1;
