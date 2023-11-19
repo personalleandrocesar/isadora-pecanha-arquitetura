@@ -2,11 +2,10 @@
 const route = useRoute()
 
 const data = await useFetch(`/api/projects`)
-
+const link = data.data.value[1].link
 const photoView = () => {
   return data.data.value
 }
-
 </script>
 
 <template>
@@ -59,7 +58,11 @@ const photoView = () => {
       <ul >
         <li v-for="item in photoView()" class="card" >
           <div>
-            <span class="card-title">{{ item.nome }}</span> 
+            <span class="card-title">
+              {{ item.nome }}
+              <NuxtLink :to="`/projetos/${item.link}`">Detalhes <Icon name="material-symbols:arrow-right-alt-rounded"/> </NuxtLink>
+              
+            </span> 
             <img :src="item.img"/>
           </div>
         </li>
@@ -78,6 +81,7 @@ i {
 h4 .icon {
   margin: -4px 0 0 0;
 }
+
 
 
 code {
@@ -182,7 +186,7 @@ code {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  box-shadow: 0 2px 2px #62847490;
+  box-shadow: 0 2px 2px #628474;
 }
 
 .main-two-card a h4 {
@@ -298,33 +302,62 @@ h3:nth-child(2) {
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  position: relative;
   transition: transform 0.8s, opacity 0.8s, color 0.8s;
   color: transparent;
 }
+.card div {
+  margin-top: -20px;
+}
+.card a{
+  transform: scale(0);
+  color: transparent;
+  transition: transform 0.8s, opacity 0.8s, color 0.8s;
+}
+.card span{
+  transform: scale(1) translate(0,-50%);
+  color: transparent;
+  transition: transform 0.8s, opacity 0.8s, color 0.8s;
+}
+
 .card:hover {
-  opacity: .2;
+  z-index: 9;
   color: #628474;
 }
+.card:hover a {
+  color: #628474;
+  transform: scale(1);
+  opacity: 1;
+}
+.card:hover span {
+  color: #628474;
+  opacity: 1;
+  transform: scale(1)
+}
+
+.card:hover img {
+  opacity: .2;
+}
+
+
 .card img{
+  color: transparent;
   opacity: 1;
   border: solid 3px #628474;
   border-radius: 8px;
   overflow-y: hidden;
   transition: transform 0.8s, opacity 0.8s, color 0.8s;
 }
-.card img:hover {
-  opacity: .2;
-  color: #628474;
-}
 
 .card-title {
   font-weight: bold;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  top: 100px;
+  top: 135px;
+  font-size: 1.2em;
+  border: solid 3px transparent;
+  z-index: 10;
 }
 </style>

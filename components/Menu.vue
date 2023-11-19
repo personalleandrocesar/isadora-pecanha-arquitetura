@@ -15,6 +15,12 @@ const clickMenu = () => {
     </div>
 
     <div v-if="openMenu" class="menuMain">        
+                    <NuxtLink to="/" class="degrau">
+                      <div>
+                        Home
+                    
+                      </div>
+                    </NuxtLink>
                     <NuxtLink to="/projetos" class="degrau">
                       <div>
                         Projetos
@@ -35,15 +41,21 @@ const clickMenu = () => {
 <style scoped>
 .menu {
     position: fixed;
-    top:15px;
+    top:25px;
+    z-index: 1004; 
     right:15px;
 }
 .menu .icon {
-    zoom: 1.4;
+  background-color: #62847420;
+  backdrop-filter: blur(15px);
+    zoom: 1.6;
+    color: #628474;
+    border-radius: 50px;
+    padding: 3px;
 }
 
 .menuMain {
-  top: 60px; 
+  top: 85px; 
   z-index: 1004; 
   transform: translateX(0%); 
   position: fixed; 

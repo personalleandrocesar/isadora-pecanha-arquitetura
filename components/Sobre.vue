@@ -80,7 +80,7 @@ code {
     flex-direction: row;
     align-items:center;
     flex-wrap: wrap;
-    margin:32px 20px 30px 20px;
+    margin: 100px 20px 30px 20px;
 }
 
 .main-one a {

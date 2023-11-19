@@ -31,10 +31,16 @@
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0px;
-    height: 100px;
+    margin: -5px 0 0 0;
+    height: 90px;
     font-family: 'Architects Daughter', cursive;
     border-bottom: solid .2px #62847420;
+    position: fixed;
+    top: 0;
+    background-color: #ffffff20;
+  backdrop-filter: blur(15px);
+  width: 100%;
+  z-index: 100;
 }
 .logo-text {
     display: flex;
