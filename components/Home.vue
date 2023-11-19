@@ -49,6 +49,7 @@ const photoView = () => {
   </div>
   <!--
 
+  -->
     <div class='main-tree'>
       <NuxtLink to="/projetos">
         <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
@@ -58,11 +59,13 @@ const photoView = () => {
     <div class='main-four' >
       <ul >
         <li v-for="item in photoView()" class="card" >
-          <img :src="item.img"/>
+          <div>
+            <span class="card-title">{{ item.nome }}</span> 
+            <img :src="item.img"/>
+          </div>
         </li>
       </ul>
     </div>
-  -->
   <NuxtPage />
   <br>
   <br>
@@ -247,7 +250,7 @@ code {
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  margin: -7px 20px 30px 20px;
+  margin: -7px 20px 10px 20px;
 }
 
 .main-tree a {
@@ -280,24 +283,48 @@ h3:nth-child(2) {
   border-bottom: solid .1px var(--color-border);
   width: 100%;
 }
+.main-four ul {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-inline-start: 0px;
+}
 
 .card {
+  margin: 0 10px;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  flex-wrap: wrap;
-  width: 90%;
-  
+  position: relative;
+  transition: transform 0.8s, opacity 0.8s, color 0.8s;
+  color: transparent;
+}
+.card:hover {
+  opacity: .2;
+  color: #628474;
 }
 .card img{
-  animation: all .4s linear;
-  overflow-y: hidden;
   opacity: 1;
- transition: transform 0.5s, opacity 0.8s;
+  border: solid 3px #628474;
+  border-radius: 8px;
+  overflow-y: hidden;
+  transition: transform 0.8s, opacity 0.8s, color 0.8s;
+}
+.card img:hover {
+  opacity: .2;
+  color: #628474;
 }
 
-.card img:hover {
-  opacity: .3;
+.card-title {
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 100px;
 }
 </style>
