@@ -47,19 +47,22 @@ const photoView = () => {
 
 
   </div>
-  <div class='main-tree'>
-    <NuxtLink to="/projetos">
-      <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
-    </NuxtLink>
+  <!--
 
-  </div>
-  <div class='main-four' >
-    <ul >
-    <li v-for="item in photoView()" class="card" >
-      <img :src="item.img"/>
-    </li>
-    </ul>
-  </div>
+    <div class='main-tree'>
+      <NuxtLink to="/projetos">
+        <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
+      </NuxtLink>
+
+    </div>
+    <div class='main-four' >
+      <ul >
+        <li v-for="item in photoView()" class="card" >
+          <img :src="item.img"/>
+        </li>
+      </ul>
+    </div>
+  -->
   <NuxtPage />
   <br>
   <br>
