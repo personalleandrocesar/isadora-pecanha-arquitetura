@@ -2,10 +2,23 @@
 const route = useRoute()
 
 const data = await useFetch(`/api/projects`)
+const dataActual = await useFetch(`/api/${route.params.id}`)
+
 
 const photoView = () => {
-    return data.data.value
+    return dataActual.data.value.img
 }
+const photoCapa = () => {
+    return dataActual.data.value
+}
+const details = () => {
+    return dataActual.data.value
+}
+
+useHead({
+    titleTemplate: `${dataActual.data.value.nome} | Isadora Peçanha - Arquitetura e Interiores`,
+})
+
 
 </script>
 
@@ -16,20 +29,26 @@ const photoView = () => {
 
   -->
     <div class='main-tree'>
-        <NuxtLink>
-            <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
-        </NuxtLink>
+        <span>
+        {{ details().nome }}
+        </span> 
+        <span class="card-thumb">
+         <img :src="photoCapa().capa" />
+        </span> 
 
     </div>
     <div class='main-four'>
-        <ul>
-            <li v-for="item in photoView()" class="card">
-                <div>
-                    <span class="card-title">{{ item.nome }}</span>
-                    <img :src="item.img" />
-                </div>
+       <ul >
+            <li v-for="item in photoView()" class="card" >
+              <div>
+                <span class="card-title">
+                  {{ item.nome }}
+                  
+                </span> 
+                <img :src="item"/>
+              </div>
             </li>
-        </ul>
+          </ul>
     </div>
     <NuxtPage />
     <br>
@@ -43,6 +62,7 @@ i {
 h4 .icon {
     margin: -4px 0 0 0;
 }
+
 
 
 code {
@@ -147,7 +167,7 @@ code {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    box-shadow: 0 2px 2px #62847490;
+    box-shadow: 0 2px 2px #628474;
 }
 
 .main-two-card a h4 {
@@ -215,7 +235,7 @@ code {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    margin: 100px 20px 10px 20px;
+    margin: 120px 20px 10px 20px;
 }
 
 .main-tree a {
@@ -264,37 +284,57 @@ h3:nth-child(2) {
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    position: relative;
     transition: transform 0.8s, opacity 0.8s, color 0.8s;
     color: transparent;
+    cursor: zoom-in;
+}
+
+.card a {
+    transform: scale(0);
+    color: transparent;
+    transition: transform 0.8s, opacity 0.8s, color 0.8s;
+}
+
+.card span {
+    transform: scale(1) translate(0, -50%);
+    color: transparent;
+    transition: transform 0.8s, opacity 0.8s, color 0.8s;
 }
 
 .card:hover {
+    z-index: 9;
     color: #628474;
 }
 
+.card:hover a {
+    color: #628474;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.card:hover span {
+    color: #628474;
+    opacity: 1;
+    transform: scale(1)
+}
+
+
 .card img {
     color: transparent;
-    opacity: 1;
-    border: solid 3px #628474;
     border-radius: 8px;
     overflow-y: hidden;
     transition: transform 0.8s, opacity 0.8s, color 0.8s;
 }
 
-.card img:hover {
-    opacity: .3;
-}
-
 .card-title {
     font-weight: bold;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 105px;
+    top: 135px;
     font-size: 1.2em;
     border: solid 3px transparent;
-}
-</style>
+    z-index: 10;
+}</style>

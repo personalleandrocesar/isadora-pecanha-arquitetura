@@ -2,7 +2,6 @@
 const route = useRoute()
 
 const data = await useFetch(`/api/projects`)
-const link = data.data.value[1].link
 const photoView = () => {
   return data.data.value
 }

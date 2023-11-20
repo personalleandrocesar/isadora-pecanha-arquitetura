@@ -60,7 +60,7 @@ const clickMenu = () => {
   transform: translateX(0%); 
   position: fixed; 
   width: 100%;
-  background-color: #ffffff80;
+  background-color: #ffffff99;
   text-align: left;
   backdrop-filter: blur(15px);
   border-top: solid .1px #62847450;
@@ -68,7 +68,7 @@ const clickMenu = () => {
 }
 
 .menuMain a div{
-    color: #62847490 ;
+    color: #aaa ;
     font-weight: bolder;
     margin: 20px;
 }
@@ -81,6 +81,8 @@ const clickMenu = () => {
     color: #628474 ;
     font-weight: bolder;
     margin: 20px;
+    text-transform: uppercase;
+    
 }
 
 

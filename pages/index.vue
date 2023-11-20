@@ -8,6 +8,7 @@ useHead({
   <main>
     <Menu/>
     <Logo />
+    <LogoTree />
     <Home />
   </main>
 </template>

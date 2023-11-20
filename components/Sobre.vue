@@ -1,3 +1,8 @@
+<script setup>
+useHead({
+  titleTemplate: 'Sobre | Isadora Peçanha - Arquitetura e Interiores',
+})
+</script>
 <template>
   <div class="logoAnimationSix">
 

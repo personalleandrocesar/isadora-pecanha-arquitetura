@@ -1,6 +1,7 @@
 export default defineEventHandler((event) => {
     return {
         "nome": "Apartamento 402",
+        "capa": "https://isadorapecanha.com/apart402/capa.png",
         "img": { 
             1: "https://isadorapecanha.com/apart402/1.png",
             2: "https://isadorapecanha.com/apart402/2.png",
