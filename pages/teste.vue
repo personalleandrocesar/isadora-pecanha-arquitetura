@@ -9,5 +9,6 @@ useHead({
     <Menu/>
     <Logo />
     <Teste />
+    <Footer/>
   </main>
 </template>

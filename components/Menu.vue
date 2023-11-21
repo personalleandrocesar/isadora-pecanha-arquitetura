@@ -21,12 +21,15 @@ const clickMenu = () => {
                     
                       </div>
                     </NuxtLink>
-                    <NuxtLink to="/projetos" class="degrau">
-                      <div>
-                        Projetos
-                    
-                      </div>
-                    </NuxtLink>
+                    <!--
+
+                      <NuxtLink to="/projetos" class="degrau">
+                        <div>
+                          Projetos
+                          
+                        </div>
+                      </NuxtLink>
+                    -->
                     <NuxtLink to="/sobre" class="degrau">
                       <div>
                         Sobre

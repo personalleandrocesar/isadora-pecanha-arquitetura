@@ -26,33 +26,48 @@ useHead({
     <LogoTwo />
     <Menu />
     <!--
-
-  -->
+        
+    -->
     <div class='main-tree'>
-        <span>
+        <h1 class="card-title">
         {{ details().nome }}
-        </span> 
-        <span class="card-thumb">
-         <img :src="photoCapa().capa" />
-        </span> 
+    </h1> 
+    <span class="card-thumb">
+        <img :src="photoCapa().capa" />
+    </span> 
+    
+</div>
 
-    </div>
-    <div class='main-four'>
-       <ul >
-            <li v-for="item in photoView()" class="card" >
-              <div>
+<div class='main-one'>
+    <NuxtLink >
+        <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
+    </NuxtLink>
+    <NuxtLink>
+        <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
+    </NuxtLink>
+    <NuxtLink>
+        <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
+    </NuxtLink>
+    
+</div>
+
+<div class='main-four'>
+    <ul >
+        <li v-for="item in photoView()" class="card" >
+            <div>
                 <span class="card-title">
-                  {{ item.nome }}
-                  
+                    {{ item.nome }}
+                    
                 </span> 
                 <img :src="item"/>
-              </div>
-            </li>
+            </div>
+        </li>
           </ul>
     </div>
     <NuxtPage />
     <br>
     <br>
+    <Footer/>
 </template>
 <style scoped>
 i {
@@ -74,12 +89,16 @@ code {
 
 .main-one {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0px 0 35px 0px;
     color: var(--color-text);
     transition: all .4s linear;
+    margin-top: 40px;
+    position: sticky;
+    top:100px;
+    z-index: 20;
 }
 
 .main-one div {
@@ -102,9 +121,6 @@ code {
 
 
 .main-one a {
-    border: solid .1px var(--color-border);
-    height: 40px;
-    width: 100px;
     color: var(--color-text);
     display: flex;
     align-items: center;
@@ -113,20 +129,6 @@ code {
     align-content: center;
     flex-wrap: wrap;
     font-size: .7em;
-    transition: all .4s linear;
-    margin: 0px 4px 0px 4px;
-    border-radius: 15px;
-    transform: translateY(1em);
-    font-weight: bold;
-    box-shadow: 0 2px 2px #628474;
-}
-
-.main-one a:hover {
-    transform: translateY(0.9em);
-    box-shadow: 0 4px 4px #628474;
-    background-color: #eee;
-    color: #628474;
-    margin: 0px 4px 0px 4px;
 }
 
 .main-two {
@@ -231,8 +233,8 @@ code {
 
 .main-tree {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
     margin: 120px 20px 10px 20px;
@@ -241,8 +243,6 @@ code {
 .main-tree a {
     transition: all .4s linear;
     border-radius: 50px;
-    height: 80px;
-    width: 80px;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -250,7 +250,6 @@ code {
     flex-wrap: wrap;
     transform: translateY(1em);
 }
-
 
 h3 {
     color: var(--color-text);
@@ -325,16 +324,22 @@ h3:nth-child(2) {
     overflow-y: hidden;
     transition: transform 0.8s, opacity 0.8s, color 0.8s;
 }
-
 .card-title {
+    font-size: 1.6em;
+    color: #628474;
+    margin-bottom: 30px;
+    width: max-content;
+    border-bottom: solid .1px var(--color-border);
+    
+}
+
+.card-thumb {
     font-weight: bold;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 135px;
-    font-size: 1.2em;
     border: solid 3px transparent;
-    z-index: 10;
-}</style>
+}
+</style>

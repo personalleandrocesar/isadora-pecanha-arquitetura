@@ -3,5 +3,6 @@
     <Menu/>
     <LogoTwo/>
     <Sobre />
+    <Footer/>
   </main>
 </template>

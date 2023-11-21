@@ -38,15 +38,14 @@ const photoView = () => {
           </h4>
         </a>
       </div>
-
+      
     </div>
     <br>
-
-
-
+    
+    
+    
   </div>
   <!--
-
     <div class='main-tree'>
       <NuxtLink to="/projetos">
         <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
@@ -67,6 +66,8 @@ const photoView = () => {
         </li>
       </ul>
     </div>
+    <Footer/>
+
   -->
   <NuxtPage />
   <br>

@@ -8,27 +8,36 @@ const data = await useFetch(`/api/projects`)
 const photoView = () => {
     return data.data.value
 }
+
+const grid = ref(true)
+const list = ref(true)
+function swit() {
+    grid.value = !grid.value
+    list.value = !list.value
+}
 </script>
 
 <template>
     <Menu/>
-        <LogoTwo/>
-    <!--
-
-  -->
-    <div class='main-tree'>
+    <LogoTwo/>
+    
+    <div class='main-one'>
         <NuxtLink to="/projetos">
             <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
         </NuxtLink>
-
+        
     </div>
-    <div class='main-four'>
+    <!--
+    <div class='main-two'>
         <div v-if="grid">
-            <icon name="material-symbols:grid-view-rounded"/>
+            <icon name="material-symbols:grid-view-rounded" @click="swit"/>
         </div>
-        <div>
-            <icon name="material-symbols-light:picture-in-picture-center-rounded"/>
+        <div v-else>
+            <icon name="material-symbols-light:picture-in-picture-center-rounded" @click="swit"/>
         </div>
+    </div>
+    -->
+    <div v-if="list" class='main-tree'>
         <ul>
             <li v-for="item in photoView()" class="card">
                 <div>
@@ -44,9 +53,19 @@ const photoView = () => {
             </li>
         </ul>
     </div>
+    <div v-else  class='main-four'>
+        <ul>
+            <li v-for="item in photoView()" class="card-grid">
+                <div>
+                    <img :src="item.img" />
+                </div>
+            </li>
+        </ul>
+    </div>
     <NuxtPage />
     <br>
     <br>
+    <Footer/>
 </template>
 <style scoped>
 i {
@@ -68,163 +87,6 @@ code {
 
 .main-one {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0px 0 35px 0px;
-    color: var(--color-text);
-    transition: all .4s linear;
-}
-
-.main-one div {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 0px;
-}
-
-.main-one a .icon {
-    font-size: 20px;
-    margin: 2px 3px 2px -2px;
-}
-
-.main-one a .icon:hover {
-    font-size: 20px;
-    margin: 2px 3px 2px -2px;
-}
-
-
-.main-one a {
-    border: solid .1px var(--color-border);
-    height: 40px;
-    width: 100px;
-    color: var(--color-text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
-    font-size: .7em;
-    transition: all .4s linear;
-    margin: 0px 4px 0px 4px;
-    border-radius: 15px;
-    transform: translateY(1em);
-    font-weight: bold;
-    box-shadow: 0 2px 2px #628474;
-}
-
-.main-one a:hover {
-    transform: translateY(0.9em);
-    box-shadow: 0 4px 4px #628474;
-    background-color: #eee;
-    color: #628474;
-    margin: 0px 4px 0px 4px;
-}
-
-.main-two {
-    padding: 0 35px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow-x: auto;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-}
-
-.main-two i {
-    font-size: 1.2em;
-    color: var(--color-text);
-}
-
-.main-two h5 {
-    margin-left: 10px;
-}
-
-.main-two-card {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-
-.main-two-card a {
-    width: 100%;
-    border-radius: 30px;
-    flex-direction: row;
-    border: solid .1px var(--color-border);
-    box-shadow: 0 2px 2px var(--color-border);
-    margin: 0px 5px 60px 0px;
-    transform: translateY(1em);
-    transition: all .4s linear;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    box-shadow: 0 2px 2px #628474;
-}
-
-.main-two-card a h4 {
-    transition: all .4s linear;
-}
-
-.main-two-card a:hover {
-    transform: translateY(0.9em);
-    box-shadow: 0 4px 4px #628474;
-    background-color: #eee;
-    color: #628474;
-}
-
-.main-two-card a:hover h4 {
-    color: #628474;
-}
-
-.main-two-card span {
-    position: relative;
-    top: -6px;
-    left: -14px;
-}
-
-.main-two-card h4 {
-    padding: 10px;
-    color: var(--color-text);
-}
-
-.main-two-card p {
-    font-size: .8em;
-}
-
-
-
-@media only screen and (min-width: 620px) {
-    .main-two {
-        padding: 0 150px;
-    }
-}
-
-@media only screen and (min-width: 800px) {
-
-    .main-two {
-        padding: 0 200px;
-    }
-}
-
-@media only screen and (min-width: 950px) {
-
-    .main-two {
-        padding: 0 300px;
-    }
-}
-
-@media only screen and (min-width: 1150px) {
-
-    .main-two {
-        padding: 0 400px;
-    }
-}
-
-.main-tree {
-    display: flex;
     justify-content: flex-start;
     flex-direction: row;
     align-items: center;
@@ -232,7 +94,7 @@ code {
     margin: 100px 20px 10px 20px;
 }
 
-.main-tree a {
+.main-one a {
     transition: all .4s linear;
     border-radius: 50px;
     height: 80px;
@@ -258,12 +120,11 @@ h3:nth-child(2) {
     margin-top: -60px;
 }
 
-.main-four {
-    border-bottom: solid .1px var(--color-border);
+.main-two {
     width: 100%;
 }
 
-.main-four ul {
+.main-two ul {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -272,8 +133,55 @@ h3:nth-child(2) {
     padding-inline-start: 0px;
 }
 
+.main-two .icon {
+    zoom: 1.4;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+.main-two div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.main-tree {
+    border-bottom: solid .1px var(--color-border);
+    width: 100%;
+}
+
+.main-tree ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-inline-start: 0px;
+    margin-top: 10px;
+}
+
+.main-tree ul li {
+    
+    margin: 0px 15px 0 15px;
+}
+
+.main-tree .icon {
+    zoom: 1.4;
+    margin-bottom: 0px;
+    text-align: right;
+}
+
+.main-four ul li {
+    
+    margin: 0px 15px 0 15px;
+}
+
+.main-four .icon {
+    zoom: 1.4;
+    margin-bottom: 0px;
+    text-align: right;
+}
 .card {
-    margin: 0 10px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -329,6 +237,60 @@ h3:nth-child(2) {
     transition: transform 0.8s, opacity 0.8s, color 0.8s;
 }
 
+.main-four {
+    border-bottom: solid .1px var(--color-border);
+    width: 100%;
+}
+
+.main-four ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.card-grid {
+    transition: transform 0.8s, opacity 0.8s, color 0.8s;
+    color: transparent;    
+}
+
+.card-grid a {
+    transform: scale(0);
+    color: transparent;
+    transition: transform 0.8s, opacity 0.8s, color 0.8s;
+}
+
+
+.card-grid:hover {
+    z-index: 9;
+    color: #628474;
+}
+
+.card-grid:hover a {
+    color: #628474;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.card-grid:hover span {
+    color: #628474;
+    opacity: 1;
+    transform: scale(1)
+}
+
+.card-grid:hover img {
+    opacity: .2;
+}
+
+
+.card-grid img {
+    color: transparent;
+    opacity: 1;
+    border: solid 3px red;
+    border-radius: 8px;
+    overflow-y: hidden;
+    transition: transform 0.8s, opacity 0.8s, color 0.8s;
+}
+
 .card-title {
     font-weight: bold;
     display: flex;
@@ -340,4 +302,5 @@ h3:nth-child(2) {
     font-size: 1.2em;
     border: solid 3px transparent;
     z-index: 10;
-}</style>
+}
+</style>
