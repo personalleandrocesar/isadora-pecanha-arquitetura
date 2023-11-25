@@ -52,7 +52,8 @@ const photoView = () => {
       </NuxtLink>
       
     </div>
-    <div class='main-four' >
+  -->
+    <!-- <div class='main-four' >
       <ul >
         <li v-for="item in photoView()" class="card" >
           <div>
@@ -65,10 +66,9 @@ const photoView = () => {
           </div>
         </li>
       </ul>
-    </div>
-    <Footer/>
+    </div> -->
+    <!-- <Footer/> -->
 
-  -->
   <NuxtPage />
   <br>
   <br>
