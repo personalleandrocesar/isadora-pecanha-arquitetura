@@ -283,22 +283,24 @@ h3:nth-child(2) {
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    transition: transform 0.8s, opacity 0.8s, color 0.8s;
+    /* transition: transform 0.8s, opacity 0.8s, color 0.8s; */
     color: transparent;
     cursor: zoom-in;
+    width: 100px;
+    height: 100px;
 }
-
+/* 
 .card a {
     transform: scale(0);
     color: transparent;
     transition: transform 0.8s, opacity 0.8s, color 0.8s;
-}
+} */
 
-.card span {
+/* .card span {
     transform: scale(1) translate(0, -50%);
     color: transparent;
     transition: transform 0.8s, opacity 0.8s, color 0.8s;
-}
+} */
 
 .card:hover {
     z-index: 9;
@@ -323,6 +325,7 @@ h3:nth-child(2) {
     border-radius: 8px;
     overflow-y: hidden;
     transition: transform 0.8s, opacity 0.8s, color 0.8s;
+    width: 150px;
 }
 .card-title {
     font-size: 1.6em;
@@ -341,5 +344,10 @@ h3:nth-child(2) {
     justify-content: center;
     position: relative;
     border: solid 3px transparent;
+    width: 150px;
+}
+.card-thumb img{
+    width: 250px;
+    height: fit-content;
 }
 </style>
