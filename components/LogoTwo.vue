@@ -34,7 +34,6 @@
     margin: -5px 0 0 0;
     height: 90px;
     font-family: 'Architects Daughter', cursive;
-    border-bottom: solid .2px #62847420;
     position: fixed;
     top: 0;
     background-color: #ffffff20;

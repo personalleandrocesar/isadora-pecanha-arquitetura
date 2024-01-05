@@ -19,15 +19,72 @@ useHead({
     titleTemplate: `${dataActual.data.value.nome} | Isadora Peçanha - Arquitetura e Interiores`,
 })
 
+const mainTextDescription = ref(true)
+const mainTextPlant = ref(false)
+const activeDescription = ref(true)
+const activePlant = ref(false)
+const activeSala = ref(true)
+const activeSuite = ref(false)
+const activeCozinha = ref(false)
+const activeBanheiros = ref(false)
+const activeVaranda = ref(false)
+
+
+function description () {
+    mainTextDescription.value = true
+    mainTextPlant.value = false
+    activeDescription.value = true
+    activePlant.value = false
+}
+function plant () {
+    mainTextDescription.value = false
+    mainTextPlant.value = true
+    activeDescription.value = false
+    activePlant.value = true
+}
+function sala () {
+    activeSala.value = true
+    activeSuite.value = false
+    activeBanheiros.value = false
+    activeCozinha.value = false
+    activeVaranda.value = false
+}
+function suite () {
+    activeSala.value = false
+    activeSuite.value = true
+    activeBanheiros.value = false
+    activeCozinha.value = false
+    activeVaranda.value = false
+}
+function cozinha () {
+    activeSala.value = false
+    activeSuite.value = false
+    activeBanheiros.value = false
+    activeCozinha.value = true
+    activeVaranda.value = false
+}
+function banheiros () {
+    activeSala.value = false
+    activeSuite.value = false
+    activeBanheiros.value = true
+    activeCozinha.value = false
+    activeVaranda.value = false
+}
+function varanda () {
+    activeSala.value = false
+    activeSuite.value = false
+    activeBanheiros.value = false
+    activeCozinha.value = false
+    activeVaranda.value = true
+}
+
 
 </script>
 
 <template>
     <LogoTwo />
     <Menu />
-    <!--
-        
-    -->
+    
     <div class='main-tree'>
         <h1 class="card-title">
         {{ details().nome }}
@@ -39,23 +96,53 @@ useHead({
 </div>
 
 <div class='main-one'>
-    <NuxtLink >
+    <!-- <NuxtLink @click="description" :class="{activa: activeDescription}">
         Descrição
-    </NuxtLink>
-    <NuxtLink>
+    </NuxtLink> -->
+    <!-- <NuxtLink @click="plant" :class="{ active: activePlant }">
         Planta 
-    </NuxtLink>
-    
+    </NuxtLink> -->
 </div>
-
-<div class='main-four'>
-    <ul >
+<div class="main-one-content">
+        <div v-if="mainTextDescription" class="mainDescription">
+            Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Sint inventore eum ipsam 
+            nostrum et quisquam fugiat id aliquam optio, 
+            quas quia? Et quas omnis tempora aliquid nobis, 
+            doloremque optio ipsum.
+        </div>
+        <div v-else="mainTextPlant" class="mainPlant">
+            <span class="plant">
+                <img :src="photoCapa().capa" />
+            </span>
+        </div>
+    </div>
+    
+   <div class='main-one'>
+        <NuxtLink @click="sala()" :class="{ activeSala: activeSala }">
+            Sala
+        </NuxtLink>
+        <NuxtLink @click="suite()" :class="{ activeSuite: activeSuite}">
+            Suíte
+        </NuxtLink>
+        <NuxtLink @click="cozinha()" :class="{ activeCozinha: activeCozinha }">
+            Cozinha
+        </NuxtLink>
+        <NuxtLink @click="banheiros()" :class="{ activeBanheiros: activeBanheiros }">
+            Banheiros 
+        </NuxtLink>
+        <NuxtLink @click="varanda()" :class="{ activeVaranda: activeVaranda }">
+            Varanda
+        </NuxtLink>
+    </div>
+    <div class='main-four'>
+        <ul >
         <li v-for="item in photoView()" class="card" >
             <div>
-                <span class="card-title">
+                <!-- <span class="card-title">
                     {{ item.nome }}
                     
-                </span> 
+                </span >  -->
                 <img :src="item"/>
             </div>
         </li>
@@ -64,7 +151,6 @@ useHead({
     <NuxtPage />
     <br>
     <br>
-    <Footer/>
 </template>
 <style scoped>
 i {
@@ -74,8 +160,6 @@ i {
 h4 .icon {
     margin: -4px 0 0 0;
 }
-
-
 
 code {
     font-size: 0.5em;
@@ -89,13 +173,19 @@ code {
     justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0px 0 35px 0px;
+    padding: 10px 0px;
     color: var(--color-text);
     transition: all .4s linear;
-    margin-top: 40px;
-    position: sticky;
-    top:100px;
+    margin: 40px 0 20px 0;
+    /* position: sticky;
+    top: 85px; */
     z-index: 20;
+    z-index: 1004; 
+    transform: translateX(0%); 
+    width: 100%;
+    background-color: #ffffff20;
+    text-align: left;
+    backdrop-filter: blur(15px);
 }
 
 .main-one div {
@@ -103,7 +193,7 @@ code {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 0px;
+    margin: 1rem;
 }
 
 .main-one a .icon {
@@ -118,14 +208,52 @@ code {
 
 
 .main-one a {
-    color: var(--color-text);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
-    font-size: .7em;
+    font-size: 1em;
+    font-weight: 800;
+    cursor: pointer;
+    color: var(--color-text);
+    /* color: #628474; */
+}
+.main-one .activa {
+    border-bottom: solid 1px #628474;
+    color: #628474;
+}
+.main-one .active {
+    border-bottom: solid 1px #628474;
+    color: #628474;
+}
+.main-one .activeSala,
+.main-one .activeSuite,
+.main-one .activeCozinha,
+.main-one .activeBanheiros,
+.main-one .activeVaranda {
+    color: #628474;
+    border-bottom: solid 1px #628474;
+}
+
+.main-one-content {
+    margin: 0rem 1rem 2rem 1rem;
+}
+.plant {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: solid 3px transparent;
+}
+.plant img {
+    width: 250px;
+    height: fit-content;
+    border-radius: 8px;
+    margin: auto;
 }
 
 .main-two {
@@ -261,20 +389,23 @@ h3:nth-child(2) {
 }
 
 .main-four {
-    border-bottom: solid .1px var(--color-border);
-    width: 33%;
+margin-top: -5rem;
+
+width: 100%;
 }
 
 .main-four ul {
     display: flex;
     justify-content: center;
     align-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding-inline-start: 0px;
+    margin-bottom:  50px;
 }
 
 .card {
-    margin: 0 10px;
+    margin:  90px 4px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -304,14 +435,12 @@ h3:nth-child(2) {
 
 .card:hover a {
     color: #628474;
-    transform: scale(1);
     opacity: 1;
 }
 
 .card:hover span {
     color: #628474;
     opacity: 1;
-    transform: scale(1)
 }
 
 
@@ -319,8 +448,7 @@ h3:nth-child(2) {
     color: transparent;
     border-radius: 8px;
     overflow-y: hidden;
-    transition: transform 0.8s, opacity 0.8s, color 0.8s;
-    width: 150px;
+    width: 180px;
 }
 .card-title {
     font-size: 1.6em;

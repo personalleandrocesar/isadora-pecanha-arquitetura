@@ -67,7 +67,6 @@ const clickMenu = () => {
   text-align: left;
   backdrop-filter: blur(15px);
   border-top: solid .1px #62847450;
-  border-bottom: solid .1px #62847450;
 }
 
 .menuMain a div{
