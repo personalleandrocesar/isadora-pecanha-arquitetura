@@ -33,7 +33,6 @@ const photoView = () => {
           target="_blank" @click.native="scrollToTop()">
           <h4>
             <Icon name="ri:whatsapp-fill" />
-
             Nosso Contato pelo Whatsapp
           </h4>
         </a>
@@ -45,9 +44,7 @@ const photoView = () => {
 
 
   </div>
-  <!--
-
-  -->
+  
   <div class='main-tree'>
     <NuxtLink to="/projetos">
       <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
@@ -295,6 +292,7 @@ h3:nth-child(2) {
   align-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
   padding-inline-start: 0px;
 }
 
@@ -349,7 +347,6 @@ h3:nth-child(2) {
 .card img {
   color: transparent;
   opacity: 1;
-  border: solid 3px #628474;
   border-radius: 8px;
   overflow-y: hidden;
   transition: transform 0.8s, opacity 0.8s, color 0.8s;

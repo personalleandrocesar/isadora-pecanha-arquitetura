@@ -40,13 +40,10 @@ useHead({
 
 <div class='main-one'>
     <NuxtLink >
-        <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
+        Descrição
     </NuxtLink>
     <NuxtLink>
-        <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
-    </NuxtLink>
-    <NuxtLink>
-        <img alt="Isadora Peçanha Arquitetura Logo" src="@/assets/projetos.png" width="70" height="70" />
+        Planta 
     </NuxtLink>
     
 </div>
@@ -62,7 +59,7 @@ useHead({
                 <img :src="item"/>
             </div>
         </li>
-          </ul>
+    </ul>
     </div>
     <NuxtPage />
     <br>
@@ -265,15 +262,14 @@ h3:nth-child(2) {
 
 .main-four {
     border-bottom: solid .1px var(--color-border);
-    width: 100%;
+    width: 33%;
 }
 
 .main-four ul {
     display: flex;
     justify-content: center;
     align-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     padding-inline-start: 0px;
 }
 
@@ -282,11 +278,10 @@ h3:nth-child(2) {
     display: flex;
     justify-content: center;
     align-content: center;
-    flex-direction: column;
+    flex-direction: row;
     /* transition: transform 0.8s, opacity 0.8s, color 0.8s; */
     color: transparent;
     cursor: zoom-in;
-    width: 100px;
     height: 100px;
 }
 /* 
@@ -349,5 +344,6 @@ h3:nth-child(2) {
 .card-thumb img{
     width: 250px;
     height: fit-content;
+    border-radius: 8px;
 }
 </style>
