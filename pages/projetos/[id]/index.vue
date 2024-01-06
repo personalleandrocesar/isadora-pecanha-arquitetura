@@ -3,32 +3,41 @@ const route = useRoute()
 
 const data = await useFetch(`/api/projects`)
 const dataActual = await useFetch(`/api/${route.params.id}`)
+useHead({
+    titleTemplate: `${dataActual.data.value.nome} | Isadora Peçanha - Arquitetura e Interiores`,
+})
 
 
-const photoView = () => {
-    return dataActual.data.value.sala
-}
 const photoCapa = () => {
     return dataActual.data.value
 }
 const details = () => {
     return dataActual.data.value
 }
+const photo = () => {
+    return dataActual.data.value
+}
 
-useHead({
-    titleTemplate: `${dataActual.data.value.nome} | Isadora Peçanha - Arquitetura e Interiores`,
-})
+
+
+
 
 const mainTextDescription = ref(true)
 const mainTextPlant = ref(false)
 const activeDescription = ref(true)
 const activePlant = ref(false)
+
 const activeSala = ref(true)
 const activeSuite = ref(false)
 const activeCozinha = ref(false)
 const activeBanheiros = ref(false)
 const activeVaranda = ref(false)
 
+const mainSala = ref(true)
+const mainVaranda = ref(false)
+const mainCozinha = ref(false)
+const mainBanheiro = ref(false)
+const mainSuite = ref(false)
 
 function description () {
     mainTextDescription.value = true
@@ -48,6 +57,11 @@ function sala () {
     activeBanheiros.value = false
     activeCozinha.value = false
     activeVaranda.value = false
+    mainSala.value = true
+    mainSuite.value = false
+    mainBanheiro.value = false
+    mainCozinha.value = false
+    mainVaranda.value = false
 }
 function suite () {
     activeSala.value = false
@@ -55,6 +69,11 @@ function suite () {
     activeBanheiros.value = false
     activeCozinha.value = false
     activeVaranda.value = false
+    mainSala.value = false
+    mainSuite.value = true
+    mainBanheiro.value = false
+    mainCozinha.value = false
+    mainVaranda.value = false
 }
 function cozinha () {
     activeSala.value = false
@@ -62,6 +81,11 @@ function cozinha () {
     activeBanheiros.value = false
     activeCozinha.value = true
     activeVaranda.value = false
+    mainSala.value = false
+    mainSuite.value = false
+    mainBanheiro.value = false
+    mainCozinha.value = true
+    mainVaranda.value = false
 }
 function banheiros () {
     activeSala.value = false
@@ -69,6 +93,11 @@ function banheiros () {
     activeBanheiros.value = true
     activeCozinha.value = false
     activeVaranda.value = false
+    mainSala.value = false
+    mainSuite.value = false
+    mainBanheiro.value = true
+    mainCozinha.value = false
+    mainVaranda.value = false
 }
 function varanda () {
     activeSala.value = false
@@ -76,6 +105,11 @@ function varanda () {
     activeBanheiros.value = false
     activeCozinha.value = false
     activeVaranda.value = true
+    mainSala.value = false
+    mainSuite.value = false
+    mainBanheiro.value = false
+    mainCozinha.value = false
+    mainVaranda.value = true
 }
 
 
@@ -136,8 +170,52 @@ function varanda () {
         </NuxtLink>
     </div>
     <div class='main-four'>
-        <ul >
-        <li v-for="item in photoView()" class="card" >
+        <ul v-if="mainSuite">
+        <li v-for="(item, index) in photo().suite" class="card" >
+            <div>
+                <!-- <span class="card-title">
+                    {{ item.nome }}
+                    
+                </span >  -->
+                <img :src="item"/>
+            </div>
+        </li>
+    </ul>
+        <ul v-else-if="mainCozinha" >
+        <li v-for="(item, index) in photo().cozinha" class="card" >
+            <div>
+                <!-- <span class="card-title">
+                    {{ item.nome }}
+                    
+                </span >  -->
+                <img :src="item"/>
+            </div>
+        </li>
+    </ul>
+        <ul v-else-if="mainBanheiro" >
+        <li v-for="(item, index) in photo().banheiros" class="card" >
+            <div>
+                <!-- <span class="card-title">
+                    {{ item.nome }}
+                    
+                </span >  -->
+                <img :src="item"/>
+            </div>
+        </li>
+    </ul>
+        <ul v-else-if="mainVaranda" >
+        <li v-for="(item, index) in photo().varanda" class="card" >
+            <div>
+                <!-- <span class="card-title">
+                    {{ item.nome }}
+                    
+                </span >  -->
+                <img :src="item"/>
+            </div>
+        </li>
+    </ul>
+        <ul v-else-if="mainSala">
+        <li v-for="(item, index) in photo().sala" class="card" >
             <div>
                 <!-- <span class="card-title">
                     {{ item.nome }}
