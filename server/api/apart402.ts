@@ -3,16 +3,16 @@ export default defineEventHandler((event) => {
         "nome": "Apartamento 402",
         "capa": "https://isadorapecanha.com/apart402/capa.png",
         "sala": { 
+            7: "https://isadorapecanha.com/apart402/7.jpg",
             8: "https://isadorapecanha.com/apart402/8.jpg",
+            9: "https://isadorapecanha.com/apart402/9.jpg",
             10: "https://isadorapecanha.com/apart402/10.jpg",
             11: "https://isadorapecanha.com/apart402/11.jpg",
-            9: "https://isadorapecanha.com/apart402/9.jpg",
             12: "https://isadorapecanha.com/apart402/12.jpg",
             13: "https://isadorapecanha.com/apart402/13.jpg",
             14: "https://isadorapecanha.com/apart402/14.jpg",
             18: "https://isadorapecanha.com/apart402/18.jpg",
             21: "https://isadorapecanha.com/apart402/21.jpg",
-            7: "https://isadorapecanha.com/apart402/7.jpg",
         },
         "cozinha": { 
             15: "https://isadorapecanha.com/apart402/15.jpg",
