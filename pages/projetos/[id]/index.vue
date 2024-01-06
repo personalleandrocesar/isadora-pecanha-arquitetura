@@ -6,7 +6,7 @@ const dataActual = await useFetch(`/api/${route.params.id}`)
 
 
 const photoView = () => {
-    return dataActual.data.value.img
+    return dataActual.data.value.sala
 }
 const photoCapa = () => {
     return dataActual.data.value
