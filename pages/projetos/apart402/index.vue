@@ -1,5 +1,12 @@
 <script setup>
+import { ref, computed } from 'vue'
+const layout = "duo"
 const route = useRoute()
+
+const exerciseImg = ref(false);
+function openExercise() {
+    exerciseImg.value = !exerciseImg.value;
+}
 
 const data = await useFetch(`/api/projects`)
 const dataActual = await useFetch(`/api/apart402`)
@@ -17,7 +24,9 @@ const details = () => {
 const photo = () => {
     return dataActual.data.value
 }
-
+const photoView = () => {
+    return dataActual.data.value.sala
+}
 
 
 
@@ -113,6 +122,8 @@ function varanda () {
 }
 
 
+
+
 </script>
 
 <template>
@@ -124,7 +135,7 @@ function varanda () {
         {{ details().nome }}
     </h1> 
     <span class="card-thumb">
-        <img :src="photoCapa().capa" />
+        <img :src="photoCapa().capa" @click="openExercise" />
     </span> 
     
 </div>
@@ -139,11 +150,7 @@ function varanda () {
 </div>
 <div class="main-one-content">
         <div v-if="mainTextDescription" class="mainDescription">
-            Apartamento 402 - Lorem ipsum dolor sit amet consectetur 
-            adipisicing elit. Sint inventore eum ipsam 
-            nostrum et quisquam fugiat id aliquam optio, 
-            quas quia? Et quas omnis tempora aliquid nobis, 
-            doloremque optio ipsum.
+            {{ details().description }}
         </div>
         <div v-else="mainTextPlant" class="mainPlant">
             <span class="plant">
@@ -171,65 +178,74 @@ function varanda () {
     </div>
     <div class='main-four'>
         <ul v-if="mainSuite">
-        <li class="card" >
-                <div>
-                    <img :src="photo().suite[2]"/>
-                    <img :src="photo().suite[3]"/>
-                    <img :src="photo().suite[4]"/>
-                </div>
-            </li>
-    </ul>
-        <ul v-else-if="mainCozinha" >
-        <li class="card" >
-                <div>
-                    <img :src="photo().cozinha[15]"/>
-                    <img :src="photo().cozinha[16]"/>
-                    <img :src="photo().cozinha[17]"/>
-                </div>
-            </li>
-    </ul>
-        <ul v-else-if="mainBanheiro" >
-        <li class="card" >
+        <li v-for="(item, index) in photo().suite" class="card" >
             <div>
                 <!-- <span class="card-title">
                     {{ item.nome }}
                     
                 </span >  -->
-                <img :src="photo().banheiros[5]"/>
-                <img :src="photo().banheiros[6]"/>
-                <img :src="photo().banheiros[19]"/>
-                <img :src="photo().banheiros[20]"/>
+                <img :src="item"/>
+            </div>
+        </li>
+    </ul>
+    
+        <ul v-else-if="mainCozinha" >
+        <li v-for="(item, index) in photo().cozinha" class="card" >
+            <div>
+                <!-- <span class="card-title">
+                    {{ item.nome }}
+                    
+                </span >  -->
+                <img :src="item"/>
+            </div>
+        </li>
+    </ul>
+        <ul v-else-if="mainBanheiro" >
+        <li v-for="(item, index) in photo().banheiros" class="card" >
+            <div>
+                <!-- <span class="card-title">
+                    {{ item.nome }}
+                    
+                </span >  -->
+                <img :src="item"/>
             </div>
         </li>
     </ul>
         <ul v-else-if="mainVaranda" >
-        <li class="card" >
-                <div>
-                    <img :src="photo().banheiros[1]"/>
-                    <img :src="photo().banheiros[22]"/>
-                    <img :src="photo().banheiros[23]"/>
-                    <img :src="photo().banheiros[24]"/>
-                    <img :src="photo().banheiros[25]"/>
-                </div>
-            </li>
+        <li v-for="(item, index) in photo().varanda" class="card" >
+            <div>
+                <!-- <span class="card-title">
+                    {{ item.nome }}
+                    
+                </span >  -->
+                <img :src="item"/>
+            </div>
+        </li>
     </ul>
         <ul v-else-if="mainSala">
-        <li class="card" >
-                <div>
-                    <img :src="photo().sala[7]"/>
-                    <img :src="photo().sala[8]"/>
-                    <img :src="photo().sala[9]"/>
-                    <img :src="photo().sala[10]"/>
-                    <img :src="photo().sala[11]"/>
-                    <img :src="photo().sala[12]"/>
-                    <img :src="photo().sala[13]"/>
-                    <img :src="photo().sala[14]"/>
-                    <img :src="photo().sala[18]"/>
-                    <img :src="photo().sala[21]"/>
-                </div>
-            </li>
+        <li v-for="(item, index) in photo().sala" class="card" >
+            <div>
+                <!-- <span class="card-title">
+                    {{ item.nome }}
+                    
+                </span >  -->
+                <img :src="item"/>
+            </div>
+        </li>
     </ul>
     </div>
+    <div v-if="exerciseImg" class="nav-bar-photo" @click="openExercise">
+              <div class="nav-top">
+
+                <!-- Início do Nav-flow -->
+                <div class="nav-flow-photo">
+                  <div class="div-img-full">
+                    <img :src="currentExercise.img" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
     <NuxtPage />
     <br>
     <br>
@@ -472,15 +488,26 @@ h3:nth-child(2) {
 
 .main-four {
 margin-top: -5rem;
+
+width: 100%;
 }
 
 .main-four ul {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding-inline-start: 0px;
     margin-bottom:  50px;
 }
 
 .card {
     margin:  90px 4px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
     /* transition: transform 0.8s, opacity 0.8s, color 0.8s; */
     color: transparent;
     cursor: zoom-in;
@@ -514,21 +541,12 @@ margin-top: -5rem;
     opacity: 1;
 }
 
-.card div {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
 
 .card img {
     color: transparent;
     border-radius: 8px;
     overflow-y: hidden;
     width: 180px;
-    margin:  6px 6px;
 }
 .card-title {
     font-size: 1.6em;
@@ -553,5 +571,45 @@ margin-top: -5rem;
     width: 250px;
     height: fit-content;
     border-radius: 8px;
+}
+
+
+
+.nav-bar-photo{
+  z-index: 1004;
+    transform: translateX(0%);
+    position: fixed;
+    height: calc(100% - 0px);
+    bottom: 0px;
+    width: 100%;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background-color: #ffffff50;
+  }
+  
+  .nav-flow-photo {
+   display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 100;
+    transform: translateX(0%);
+    position: fixed;
+    height: calc(100% - 0px);
+    bottom: 0px;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background-color: #ffffff50;
+  }
+  
+  .div-img-full img {
+    box-shadow: 0px 7px 20px #095D62;
+    height: 300px;
+    width: 300px;
+    border-radius: 7px;
+    border: #05959c 2px solid;
+    z-index: 100;
+    opacity: 1;
 }
 </style>

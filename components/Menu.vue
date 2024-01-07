@@ -45,7 +45,7 @@ const clickMenu = () => {
 .menu {
     position: fixed;
     top:25px;
-    z-index: 1004; 
+    z-index: 100; 
     right:15px;
 }
 .menu .icon {
