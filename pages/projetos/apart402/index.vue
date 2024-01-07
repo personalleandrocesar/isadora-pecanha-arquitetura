@@ -1,18 +1,18 @@
 <script setup>
 import { ref, computed } from 'vue'
-const layout = "duo"
 const route = useRoute()
-
-const exerciseImg = ref(false);
-function openExercise() {
-    exerciseImg.value = !exerciseImg.value;
-}
 
 const data = await useFetch(`/api/projects`)
 const dataActual = await useFetch(`/api/apart402`)
 useHead({
     titleTemplate: `${dataActual.data.value.nome} | Isadora Peçanha - Arquitetura e Interiores`,
 })
+
+const photoImg = ref(false);
+function openPhoto() {
+    photoImg.value = !photoImg.value;
+}
+
 
 
 const photoCapa = () => {
@@ -135,7 +135,7 @@ function varanda () {
         {{ details().nome }}
     </h1> 
     <span class="card-thumb">
-        <img :src="photoCapa().capa" @click="openExercise" />
+        <img :src="photoCapa().capa" @click="openPhoto" />
     </span> 
     
 </div>
@@ -234,13 +234,13 @@ function varanda () {
         </li>
     </ul>
     </div>
-    <div v-if="exerciseImg" class="nav-bar-photo" @click="openExercise">
+    <div v-if="photoImg" class="nav-bar-photo" @click="openPhoto">
               <div class="nav-top">
 
                 <!-- Início do Nav-flow -->
                 <div class="nav-flow-photo">
                   <div class="div-img-full">
-                    <img :src="currentExercise.img" />
+                    <img :src="photo().sala[item]" />
                   </div>
                 </div>
 
@@ -604,11 +604,9 @@ width: 100%;
   }
   
   .div-img-full img {
-    box-shadow: 0px 7px 20px #095D62;
     height: 300px;
     width: 300px;
     border-radius: 7px;
-    border: #05959c 2px solid;
     z-index: 100;
     opacity: 1;
 }
