@@ -2,7 +2,7 @@
 const route = useRoute()
 
 const data = await useFetch(`/api/projects`)
-const dataActual = await useFetch(`/api/${route.params.id}`)
+const dataActual = await useFetch(`/api/apart402`)
 useHead({
     titleTemplate: `${dataActual.data.value.nome} | Isadora Peçanha - Arquitetura e Interiores`,
 })
@@ -139,7 +139,7 @@ function varanda () {
 </div>
 <div class="main-one-content">
         <div v-if="mainTextDescription" class="mainDescription">
-            Lorem ipsum dolor sit amet consectetur 
+            Apartamento 402 - Lorem ipsum dolor sit amet consectetur 
             adipisicing elit. Sint inventore eum ipsam 
             nostrum et quisquam fugiat id aliquam optio, 
             quas quia? Et quas omnis tempora aliquid nobis, 
@@ -153,77 +153,81 @@ function varanda () {
     </div>
     
    <div class='main-one'>
-        <NuxtLink @click="sala()" :class="{ activeSala: activeSala }">
+        <NuxtLink v-if="dataActual.data.value.sala" @click="sala()" :class="{ activeSala: activeSala }">
             Sala
         </NuxtLink>
-        <NuxtLink @click="suite()" :class="{ activeSuite: activeSuite}">
+        <NuxtLink v-if="dataActual.data.value.suite" @click="suite()" :class="{ activeSuite: activeSuite}">
             Suíte
         </NuxtLink>
-        <NuxtLink @click="cozinha()" :class="{ activeCozinha: activeCozinha }">
+        <NuxtLink v-if="dataActual.data.value.cozinha" @click="cozinha()" :class="{ activeCozinha: activeCozinha }">
             Cozinha
         </NuxtLink>
-        <NuxtLink @click="banheiros()" :class="{ activeBanheiros: activeBanheiros }">
+        <NuxtLink v-if="dataActual.data.value.banheiros" @click="banheiros()" :class="{ activeBanheiros: activeBanheiros }">
             Banheiros 
         </NuxtLink>
-        <NuxtLink @click="varanda()" :class="{ activeVaranda: activeVaranda }">
+        <NuxtLink v-if="dataActual.data.value.varanda" @click="varanda()" :class="{ activeVaranda: activeVaranda }">
             Varanda
         </NuxtLink>
     </div>
     <div class='main-four'>
         <ul v-if="mainSuite">
-        <li v-for="(item, index) in photo().suite" class="card" >
-            <div>
-                <!-- <span class="card-title">
-                    {{ item.nome }}
-                    
-                </span >  -->
-                <img :src="item"/>
-            </div>
-        </li>
+        <li class="card" >
+                <div>
+                    <img :src="photo().suite[2]"/>
+                    <img :src="photo().suite[3]"/>
+                    <img :src="photo().suite[4]"/>
+                </div>
+            </li>
     </ul>
         <ul v-else-if="mainCozinha" >
-        <li v-for="(item, index) in photo().cozinha" class="card" >
-            <div>
-                <!-- <span class="card-title">
-                    {{ item.nome }}
-                    
-                </span >  -->
-                <img :src="item"/>
-            </div>
-        </li>
+        <li class="card" >
+                <div>
+                    <img :src="photo().cozinha[15]"/>
+                    <img :src="photo().cozinha[16]"/>
+                    <img :src="photo().cozinha[17]"/>
+                </div>
+            </li>
     </ul>
         <ul v-else-if="mainBanheiro" >
-        <li v-for="(item, index) in photo().banheiros" class="card" >
+        <li class="card" >
             <div>
                 <!-- <span class="card-title">
                     {{ item.nome }}
                     
                 </span >  -->
-                <img :src="item"/>
+                <img :src="photo().banheiros[5]"/>
+                <img :src="photo().banheiros[6]"/>
+                <img :src="photo().banheiros[19]"/>
+                <img :src="photo().banheiros[20]"/>
             </div>
         </li>
     </ul>
         <ul v-else-if="mainVaranda" >
-        <li v-for="(item, index) in photo().varanda" class="card" >
-            <div>
-                <!-- <span class="card-title">
-                    {{ item.nome }}
-                    
-                </span >  -->
-                <img :src="item"/>
-            </div>
-        </li>
+        <li class="card" >
+                <div>
+                    <img :src="photo().banheiros[1]"/>
+                    <img :src="photo().banheiros[22]"/>
+                    <img :src="photo().banheiros[23]"/>
+                    <img :src="photo().banheiros[24]"/>
+                    <img :src="photo().banheiros[25]"/>
+                </div>
+            </li>
     </ul>
         <ul v-else-if="mainSala">
-        <li v-for="(item, index) in photo().sala" class="card" >
-            <div>
-                <!-- <span class="card-title">
-                    {{ item.nome }}
-                    
-                </span >  -->
-                <img :src="item"/>
-            </div>
-        </li>
+        <li class="card" >
+                <div>
+                    <img :src="photo().sala[7]"/>
+                    <img :src="photo().sala[8]"/>
+                    <img :src="photo().sala[9]"/>
+                    <img :src="photo().sala[10]"/>
+                    <img :src="photo().sala[11]"/>
+                    <img :src="photo().sala[12]"/>
+                    <img :src="photo().sala[13]"/>
+                    <img :src="photo().sala[14]"/>
+                    <img :src="photo().sala[18]"/>
+                    <img :src="photo().sala[21]"/>
+                </div>
+            </li>
     </ul>
     </div>
     <NuxtPage />
@@ -468,26 +472,15 @@ h3:nth-child(2) {
 
 .main-four {
 margin-top: -5rem;
-
-width: 100%;
 }
 
 .main-four ul {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
     padding-inline-start: 0px;
     margin-bottom:  50px;
 }
 
 .card {
     margin:  90px 4px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
     /* transition: transform 0.8s, opacity 0.8s, color 0.8s; */
     color: transparent;
     cursor: zoom-in;
@@ -521,12 +514,21 @@ width: 100%;
     opacity: 1;
 }
 
+.card div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 
 .card img {
     color: transparent;
     border-radius: 8px;
     overflow-y: hidden;
     width: 180px;
+    margin:  6px 6px;
 }
 .card-title {
     font-size: 1.6em;

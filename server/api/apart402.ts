@@ -2,6 +2,7 @@ export default defineEventHandler((event) => {
     return {
         "nome": "Apartamento 402",
         "capa": "https://isadorapecanha.com/apart402/capa.png",
+        "comodos": ["Sala", "Cozinha", "Suite", "Varanda", "Banheiros"],
         "sala": { 
             7: "https://isadorapecanha.com/apart402/7.jpg",
             8: "https://isadorapecanha.com/apart402/8.jpg",
