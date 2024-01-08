@@ -1,8 +1,7 @@
 <template>
   <main>
-    <Menu/>
+    <Menu />
     <LogoTwo/>
     <Sobre />
-    <Footer/>
   </main>
 </template>
