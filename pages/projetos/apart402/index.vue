@@ -140,14 +140,6 @@ function varanda () {
     
 </div>
 
-<div class='main-one'>
-    <!-- <NuxtLink @click="description" :class="{activa: activeDescription}">
-        Descrição
-    </NuxtLink> -->
-    <!-- <NuxtLink @click="plant" :class="{ active: activePlant }">
-        Planta 
-    </NuxtLink> -->
-</div>
 <div class="main-one-content">
         <div v-if="mainTextDescription" class="mainDescription">
             {{ details().description }}
@@ -337,6 +329,10 @@ code {
 
 .main-one-content {
     margin: 0rem 1rem 2rem 1rem;
+}
+
+.mainDescription {
+    margin-top: 2.5rem;
 }
 .plant {
     font-weight: bold;

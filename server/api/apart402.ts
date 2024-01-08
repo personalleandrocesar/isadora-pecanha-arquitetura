@@ -2,6 +2,11 @@ export default defineEventHandler((event) => {
     return {
         "nome": "Apartamento 402",
         "capa": "https://isadorapecanha.com/apart402/capa.png",
+        "description": `Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. Porro, nobis cupiditate! Delectus 
+        labore aliquid minima cupiditate culpa, odio assumenda 
+        nihil corrupti. Dolor explicabo excepturi harum fuga
+         iste eaque soluta aliquam?`,
         "comodos": ["Sala", "Cozinha", "Suite", "Varanda", "Banheiros"],
         "sala": { 
             7: "https://isadorapecanha.com/apart402/7.jpg",
