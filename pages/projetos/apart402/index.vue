@@ -3,7 +3,7 @@ import { ref, computed } from 'vue'
 const route = useRoute()
 
 const data = await useFetch(`/api/projects`)
-const dataActual = await useFetch(`/api/apart402`)
+const dataActual = await useFetch(`/api/apart402/min`)
 useHead({
     titleTemplate: `${dataActual.data.value.nome} | Isadora Peçanha - Arquitetura e Interiores`,
 })
