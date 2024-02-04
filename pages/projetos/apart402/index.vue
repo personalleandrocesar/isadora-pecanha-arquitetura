@@ -2,30 +2,26 @@
 import { ref, computed } from 'vue'
 const route = useRoute()
 
-const data = await useFetch(`/api/projects`)
-const dataActual = await useFetch(`/api/apart402/min`)
+const data = await useFetch(`/api/apart402`)
 useHead({
-    titleTemplate: `${dataActual.data.value.nome} | Isadora Peçanha - Arquitetura e Interiores`,
+    titleTemplate: `${data.data.value.nome} | Isadora Peçanha - Arquitetura e Interiores`,
 })
 
 const photoImg = ref(false);
-function openPhoto() {
+function openPhoto(index) {
     photoImg.value = !photoImg.value;
 }
 
 
 
 const photoCapa = () => {
-    return dataActual.data.value
+    return data.data.value
 }
 const details = () => {
-    return dataActual.data.value
+    return data.data.value
 }
 const photo = () => {
-    return dataActual.data.value
-}
-const photoView = () => {
-    return dataActual.data.value.sala
+    return data.data.value
 }
 
 
@@ -152,19 +148,19 @@ function varanda () {
     </div>
     
    <div class='main-one'>
-        <NuxtLink v-if="dataActual.data.value.sala" @click="sala()" :class="{ activeSala: activeSala }">
+        <NuxtLink v-if="data.data.value.sala" @click="sala()" :class="{ activeSala: activeSala }">
             Sala
         </NuxtLink>
-        <NuxtLink v-if="dataActual.data.value.suite" @click="suite()" :class="{ activeSuite: activeSuite}">
+        <NuxtLink v-if="data.data.value.suite" @click="suite()" :class="{ activeSuite: activeSuite}">
             Suíte
         </NuxtLink>
-        <NuxtLink v-if="dataActual.data.value.cozinha" @click="cozinha()" :class="{ activeCozinha: activeCozinha }">
+        <NuxtLink v-if="data.data.value.cozinha" @click="cozinha()" :class="{ activeCozinha: activeCozinha }">
             Cozinha
         </NuxtLink>
-        <NuxtLink v-if="dataActual.data.value.banheiros" @click="banheiros()" :class="{ activeBanheiros: activeBanheiros }">
+        <NuxtLink v-if="data.data.value.banheiros" @click="banheiros()" :class="{ activeBanheiros: activeBanheiros }">
             Banheiros 
         </NuxtLink>
-        <NuxtLink v-if="dataActual.data.value.varanda" @click="varanda()" :class="{ activeVaranda: activeVaranda }">
+        <NuxtLink v-if="data.data.value.varanda" @click="varanda()" :class="{ activeVaranda: activeVaranda }">
             Varanda
         </NuxtLink>
     </div>
@@ -221,7 +217,7 @@ function varanda () {
                     {{ item.nome }}
                     
                 </span >  -->
-                <img :src="item"/>
+                <img :src="item" @click="openPhoto()"/>
             </div>
         </li>
     </ul>
@@ -232,7 +228,7 @@ function varanda () {
                 <!-- Início do Nav-flow -->
                 <div class="nav-flow-photo">
                   <div class="div-img-full">
-                    <img :src="photo().sala[item]" />
+                    <img :src="photoCapa().capa" />
                   </div>
                 </div>
 
