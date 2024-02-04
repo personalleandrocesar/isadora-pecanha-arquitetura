@@ -36,6 +36,14 @@ const photoView = () => {
             Nosso Contato pelo Whatsapp
           </h4>
         </a>
+        <a href="https://api.whatsapp.com/send?phone=5521966579611%20&text=Ol%C3%A1%20Isadora,%20me%20chamo%20"
+            target="_blank" @click.native="scrollToTop()">
+            <h4>
+              <Icon name="fluent:form-20-filled" />
+
+              Solicite seu orçamento
+            </h4>
+          </a>
       </div>
 
     </div>
@@ -178,13 +186,16 @@ code {
   flex-direction: row;
   border: solid .1px var(--color-border);
   box-shadow: 0 2px 2px var(--color-border);
-  margin: 0px 5px 60px 0px;
+  margin: 0px 5px 50px 0px;
   transform: translateY(1em);
   transition: all .4s linear;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   box-shadow: 0 2px 2px #628474;
+}
+.main-two-card a:nth-child(1) {
+  margin: 0px 5px 20px 0px;
 }
 
 .main-two-card a h4 {
