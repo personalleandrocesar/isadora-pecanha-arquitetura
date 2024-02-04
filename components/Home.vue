@@ -37,7 +37,7 @@ const photoView = () => {
             Fale conosco
           </h4>
         </a>
-        <a href="https://api.whatsapp.com/send?phone=5521966579611%20&text=Ol%C3%A1%20Isadora,%20me%20chamo%20"
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfc1XXRm68otzBo2hYYF6O08Eg8GRd8x5m-kuaKpA12bEmwGA/viewform?usp=pp_url"
           target="_blank" @click.native="scrollToTop()">
           <h4>
             <Icon name="fluent:form-20-filled" />
