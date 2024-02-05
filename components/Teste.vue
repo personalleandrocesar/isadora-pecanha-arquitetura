@@ -30,13 +30,14 @@ const photoView = () => {
 
       <div class='main-two-card'>
         <a href="https://api.whatsapp.com/send?phone=5521966579611%20&text=Ol%C3%A1%20Isadora,%20me%20chamo%20"
-          target="_blank" @click.native="scrollToTop()">
-          <h4>
-            <Icon name="ri:whatsapp-fill" />
-            Nosso Contato pelo Whatsapp
-          </h4>
-        </a>
-        <a href="https://api.whatsapp.com/send?phone=5521966579611%20&text=Ol%C3%A1%20Isadora,%20me%20chamo%20"
+            target="_blank" @click.native="scrollToTop()">
+            <h4>
+              <Icon name="ri:whatsapp-fill" />
+
+              Fale conosco
+            </h4>
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfc1XXRm68otzBo2hYYF6O08Eg8GRd8x5m-kuaKpA12bEmwGA/viewform?usp=pp_url"
             target="_blank" @click.native="scrollToTop()">
             <h4>
               <Icon name="fluent:form-20-filled" />

@@ -5,13 +5,13 @@ const route = useRoute()
 const data = await useFetch(`/api/apart402`)
 useHead({
     titleTemplate: `${data.data.value.nome} | Isadora Peçanha - Arquitetura e Interiores`,
+    viewport: 'width=device-width, initial-scale=3, maximum-scale=3, user-scalable=yes',
 })
 
 const photoImg = ref(false);
-function openPhoto(index) {
+function openPhoto() {
     photoImg.value = !photoImg.value;
 }
-
 
 
 const photoCapa = () => {
@@ -23,7 +23,6 @@ const details = () => {
 const photo = () => {
     return data.data.value
 }
-
 
 
 
@@ -146,6 +145,18 @@ function varanda () {
             </span>
         </div>
     </div>
+    <div v-if="photoImg" class="nav-bar-photo" @click="openPhoto">
+              <div class="nav-top">
+
+                <!-- Início do Nav-flow -->
+                <div class="nav-flow-photo">
+                  <div class="div-img-full">
+                    <img :src="photoCapa().capa" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
     
    <div class='main-one'>
         <NuxtLink v-if="data.data.value.sala" @click="sala()" :class="{ activeSala: activeSala }">
@@ -174,6 +185,7 @@ function varanda () {
                 </span >  -->
                 <img :src="item"/>
             </div>
+            
         </li>
     </ul>
     
@@ -222,18 +234,7 @@ function varanda () {
         </li>
     </ul>
     </div>
-    <div v-if="photoImg" class="nav-bar-photo" @click="openPhoto">
-              <div class="nav-top">
-
-                <!-- Início do Nav-flow -->
-                <div class="nav-flow-photo">
-                  <div class="div-img-full">
-                    <img :src="photoCapa().capa" />
-                  </div>
-                </div>
-
-              </div>
-            </div>
+    
     <NuxtPage />
     <br>
     <br>
